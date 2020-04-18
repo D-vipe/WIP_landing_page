@@ -1,0 +1,255 @@
+@import url(./css/onepage-scroll.css);
+@import url(./css/owl.carousel.min.css);
+@import url(./css/owl.theme.default.min.css);
+@font-face {
+  font-family: "GothamPro";
+  src: url("./fonts/GothamPro.ttf") format("ttf");
+  src: url("./fonts/GothaPro.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "GothamProBold";
+  src: url("./fonts/GothamProBold.ttf") format("ttf");
+  src: url("./fonts/GothaProBold.otf") format("otf");
+  font-weight: bold;
+  font-style: normal; }
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  height: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+section, div {
+  box-sizing: border-box; }
+
+body {
+  font: 12px/18px "GothamPro", sans-serif;
+  height: 100%; }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  animation-name: wrapperToFront;
+  animation-delay: 2.2s;
+  z-index: 1;
+  animation-fill-mode: forwards; }
+
+.header {
+  height: 150px;
+  background: #FFE680; }
+
+.content {
+  padding: 0 0 200px; }
+
+.footer {
+  margin: -200px auto 0;
+  min-width: 1000px;
+  height: 200px;
+  background: #BFF08E;
+  position: relative; }
+
+@keyframes curtainScroll {
+  from {
+    height: 100%; }
+  to {
+    height: 0; } }
+@keyframes curtainDim {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes wrapperToFront {
+  from {
+    z-index: 1; }
+  to {
+    z-index: 5; } }
+.section-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 52px 70px;
+  position: relative;
+  flex-flow: column;
+  justify-content: space-between;
+  overflow: hidden; }
+
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #000000;
+  opacity: 1;
+  animation: curtainDim 1s ease-out 1.2s forwards; }
+  .curtain .curtain__container {
+    height: 100%;
+    background-color: #01da00;
+    margin: 0 67px;
+    animation: curtainScroll 1s ease-out 0.3s forwards; }
+
+.button {
+  padding: 10px 20px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #01da00; }
+  .button.button_main {
+    background-color: #01da00; }
+
+#sectionHeader {
+  height: 100%;
+  object-fit: contain; }
+  #sectionHeader .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+  #sectionHeader .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000; }
+    #sectionHeader .video-bg video {
+      height: 100vh;
+      width: 100vw;
+      transform: scale(1.2); }
+  #sectionHeader .header-info {
+    position: relative;
+    display: flex;
+    z-index: 2; }
+    #sectionHeader .header-info img {
+      margin-right: 40px; }
+    #sectionHeader .header-info .header-info__text {
+      height: 128px;
+      max-width: 504px;
+      font-family: "GothamPro", sans-serif;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: #ffffff; }
+  #sectionHeader .button-block {
+    position: relative;
+    z-index: 5; }
+  #sectionHeader .logo {
+    display: block;
+    width: 100%;
+    position: relative; }
+    #sectionHeader .logo .logo__top {
+      height: 184px;
+      background: url("../img/pike.svg") left no-repeat; }
+    #sectionHeader .logo .logo__bottom {
+      height: 184px;
+      background: url("../img/medialab.svg") left no-repeat; }
+
+#sectionClients {
+  position: relative;
+  z-index: 1; }
+  #sectionClients.dark-noise:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    z-index: -1;
+    background: url("../img/dark-noise.gif"); }
+  #sectionClients .advantages {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    padding-top: 134px;
+    padding-left: 305px; }
+    #sectionClients .advantages .advantages__item {
+      display: flex;
+      flex-direction: column;
+      margin-right: 120px; }
+      #sectionClients .advantages .advantages__item .advantages__header {
+        font-size: 80px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        color: #ffffff;
+        text-align: left;
+        margin-bottom: 18px; }
+      #sectionClients .advantages .advantages__item .advantages__description {
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #ffffff; }
+  #sectionClients .dotted-title {
+    font-size: 80px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -1.7px;
+    color: #ffffff;
+    padding-left: 305px;
+    display: flex;
+    align-items: flex-end; }
+    #sectionClients .dotted-title .dotted-title__dot {
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-color: #01da00;
+      margin-bottom: 10px;
+      margin-left: 7px; }
+  #sectionClients .client-slider {
+    padding-left: 305px; }
+
+/*# sourceMappingURL=style.css.map */

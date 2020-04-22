@@ -1,0 +1,96 @@
+#sectionConstructor
+  position: relative
+  z-index: 1
+  &.white-noise
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: .15
+      z-index: -1
+      background: url('../img/dark-noise_copy.gif')
+
+  .section-container
+    flex-flow: row
+    justify-content: center
+    align-items: center
+
+    .column
+      display: flex
+      flex-direction: column
+      &.align-center
+        justify-content: center
+
+    .section-title
+      margin-bottom: 60px
+
+    .object-container
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .object-wrapper
+        display: flex
+        align-items: flex-end
+        margin-top: 200px
+
+      .right-part
+        margin-left: 12px
+        .short-black-line
+          width: 130px
+          height: 20px
+          background-color: $plain-black
+          flex-shrink: 0
+          margin: 25px 0
+
+        .green-square
+          width: 130px
+          height: 130px
+          border: 20px solid $main-color
+          flex-shrink: 0
+
+        .black-circle
+          width: 130px
+          height: 130px
+          border: 20px solid $plain-black
+          border-radius: 50%
+          flex-shrink: 0
+
+      .left-part
+        margin-right: 12px
+        .long-black-line
+          width: 210px
+          height: 20px
+          background-color: $plain-black
+          margin-top: 25px
+        .triangle
+          width: 210px
+          height: 230px
+          border-bottom: 20px solid $main-color
+          border-right: 20px solid $main-color
+          border-left: 20px solid transparent
+          border-top: 20px solid transparent
+          position: relative
+          &:before
+            position: absolute
+            content: ''
+            width: 260px
+            height: 20px
+            background-color: #01da00
+            transform: rotate(-48deg)
+            top: 90px
+            right: -54px
+          &:after
+            position: absolute
+            content: ''
+            width: 25px
+            height: 25px
+            border: 1px solid transparent
+            border-radius: 50%
+            background-color: $plain-black
+            bottom: 40px
+            right: 30px
+

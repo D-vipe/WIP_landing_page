@@ -15,7 +15,7 @@ module.exports = {
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
-					'file-loader?name=css/[name].css',
+					'file-loader?name=[name].css',
 					'extract-loader',
 					'css-loader',
 					{

@@ -20,10 +20,10 @@ module.exports = {
 					'css-loader',
 					{
 					  loader: 'resolve-url-loader',
-					  options: {
-					  	sourceMap: true,
-          				sourceMapContents: false
-					  }
+					  // options: {
+					  // 	sourceMap: true,
+          			// 	sourceMapContents: false
+					  // }
 					},
 					'sass-loader',
 				],

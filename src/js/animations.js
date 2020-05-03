@@ -86,13 +86,13 @@ $(document).ready(() => {
 
         //Left side enter-animation
         gsap.fromTo('.section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
-        gsap.fromTo('.styled-list', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2.2});
+        gsap.fromTo('.styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2}, '<.2');
 
         //Right side enter-animations
         let figureHub = gsap.timeline();
         figureHub.set('#bottomRighthub', {rotate: -90, y: 23});
         figureHub.set('.long-black-line', {rotate: 90, x: 90, y: 120});
-        figureHub.set('.triangle', {opacity: 0});
+        figureHub.set('#sectionConstructor .triangle', {opacity: 0});
         figureHub.set('.black-circle', {x: -90, y: -335});
         figureHub.fromTo('.green-square', {y: 300, rotate: 125, scale: 0}, {y: 0, rotate: 0, scale: 1, duration: .5, delay: .8});
         figureHub.fromTo('.short-black-line', {width: 0, rotate: -90}, {width: 130, x: -50, y:-50, duration: .5, delay: .8}, 0);
@@ -103,7 +103,7 @@ $(document).ready(() => {
         figureHub.to('.long-black-line', {x: 20, y: -80, rotate: 50, duration: .2});
         figureHub.to('.long-black-line', {x: 0, y:0, rotate: 0, duration: .2});
 
-        figureHub.fromTo('.triangle', 1, {rotate: -245, scale: 0, x: -400}, {rotate: 0, scale: 1, x: 0, opacity: 1} );
+        figureHub.fromTo('#sectionConstructor .triangle', 1, {rotate: -345, scale: 0, x: -400}, {rotate: 0, scale: 1, x: 0, opacity: 1} );
         figureHub.to('.black-circle', .4, {y: -75});
         figureHub.to('.black-circle', .1, {x: -70, y: -70});
         figureHub.to('.black-circle', .2, {x: -25, y: -120});
@@ -116,9 +116,9 @@ $(document).ready(() => {
 
       if (index === 4) {
         gsap.fromTo('#digitalArchive .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
-        gsap.fromTo('.boast-block', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
-        gsap.fromTo('#digitalArchive .styled-list', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2.2});
-        gsap.fromTo('.boast-block__circle', {rotate: -100}, {rotate: 0, duration: 2});
+        gsap.fromTo('.boast-block', {y: 330, opacity: 0}, {y: 0, opacity: 1, duration: 2});
+        gsap.fromTo('#digitalArchive .styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2.2});
+        gsap.fromTo('.boast-block__circle', {rotate: -200}, {rotate: 0, duration: 3});
 
         //object animation
         let figureHub = gsap.timeline();
@@ -137,6 +137,57 @@ $(document).ready(() => {
           opacity: 1,
           stagger: .1
         });
+      }
+
+      if (index === 5) {
+        gsap.set('#signalTransmission .fourth-ring', {opacity: 0});
+        gsap.set('#signalTransmission .third-ring', {opacity: 0});
+        gsap.set('#signalTransmission .second-ring', {opacity: 0});
+
+        gsap.fromTo('#signalTransmission .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
+        gsap.fromTo('#signalTransmission .styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2}, '<.3');
+
+        let circleHub = gsap.timeline();
+        circleHub.to('#signalTransmission .fourth-ring', 1, {opacity: 1, delay: .8});
+        circleHub.fromTo('#signalTransmission .fourth-ring', 1.5, {rotate: 395}, {rotate: 50}, '<.2');
+        circleHub.fromTo('#signalTransmission .third-ring', 1.5, {rotate: -395}, {rotate: 50, opacity: 1}, '<.3');
+        circleHub.fromTo('#signalTransmission .second-ring', 1.5, {rotate: 395}, {rotate: 50, opacity: 1}, '<.3');
+      }
+
+      if (index === 6) {
+        gsap.fromTo('#promoSection .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
+        gsap.fromTo('#promoSection .boast-block', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 3}, '<.2');
+        gsap.fromTo('#promoSection .styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2}, '<.3');
+        gsap.fromTo('.boast-block__circle', {rotate: -200}, {rotate: 0, duration: 3.5});
+
+        let triangleAnimation = gsap.timeline();
+        triangleAnimation.set('.outer-ring__brick', {opacity: 0});
+        triangleAnimation.set('.triangle-object', {opacity: 0});
+
+        triangleAnimation.to('#firstRing .outer-ring__brick', .5, {opacity: 1, delay: .8});
+        triangleAnimation.fromTo('#firstRing .outer-ring__brick:nth-child(1)', .8, {y: 130}, {y: 0, opacity: 1}, '<.2');
+        triangleAnimation.fromTo('#firstRing .outer-ring__brick:nth-child(2)', .8, {x: 135}, {x: 0, opacity: 1}, '<0');
+        triangleAnimation.fromTo('#firstRing .outer-ring__brick:nth-child(3)', .8, {x: -135}, {x: 0, opacity: 1}, '<0');
+        triangleAnimation.fromTo('#firstRing .outer-ring__brick:nth-child(4)', .8, {y: -140}, {y: 0, opacity: 1}, '<0');
+
+        triangleAnimation.fromTo('.triangle-object', .6, {rotate:-90, opacity: 0, scale: 0}, {x: -20, y: -30,
+          scale: .8, opacity: 1});
+        triangleAnimation.to('#firstRing', .8, {rotate: -90}, '<.1');
+        triangleAnimation.to('#secondRing .outer-ring__brick', .3, {opacity: 1}, '<.2');
+        triangleAnimation.fromTo('#secondRing', .8, {rotate: -45}, {rotate: 45}, '<.1');
+        triangleAnimation.to('.triangle-object', .8, {rotate: 0, x:0, y: 0, scale: 1}, '<0');
+
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(1) .outer-ring__cover', .8, {y: -60}, {y: 0}, '>.2');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(2) .outer-ring__cover', .8, {y: 60}, {y: 0}, '<0');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(3) .outer-ring__cover', .8, {y: -60}, {y: 0}, '<0');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(4) .outer-ring__cover', .8, {y: 60}, {y: 0}, '<0');
+        triangleAnimation.to('.triangle-object', .3, {scale: .9}, '<0');
+
+        triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(1) .outer-ring__cover', .8, {y: -60}, '>.2');
+        triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(2) .outer-ring__cover', .8, {y: 60}, '<0');
+        triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(3) .outer-ring__cover', .8, {y: -60}, '<0');
+        triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(4) .outer-ring__cover', .8, {y: 60}, '<0');
+        triangleAnimation.to('.triangle-object', .3, {scale: 1}, '<.2');
       }
     },  // This option accepts a callback function. The function will be called before the page moves.
     afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.

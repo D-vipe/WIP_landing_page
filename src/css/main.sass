@@ -1,3 +1,8 @@
+.bg-black
+  background-color: $plain-black
+.bg-main
+  background-color: $main-color
+
 .section-container
   display: flex
   width: 100%
@@ -223,5 +228,58 @@
 
   li
     margin-bottom: 10px
+
+section
+  .section-title
+    margin-bottom: 65px
+  .boast-block
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    width: 175px
+    height: 176px
+    top: 43%
+    right: 40px
+    cursor: pointer
+    .boast-block__circle
+      position: relative
+      width: 100%
+      height: 100%
+      background: url('../img/feature-text.png') center no-repeat
+      background-size: cover
+    .boast-block__rock
+      position: absolute
+      width: 55px
+      height: 90px
+      background: url('../img/rock-icon.png') center no-repeat
+      background-size: cover
+
+    .hover__wrap
+      position: absolute
+      background-color: #000000
+      color: #ffffff
+      padding: 25px
+      width: 313px
+      height: 313px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      transform: scale(0)
+      transition: all .3s ease-in
+      z-index: 6
+      p
+        font-size: 16px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.5
+        letter-spacing: normal
+        text-align: center
+        color: #ffffff
+    &:hover
+      .hover__wrap
+        transform: scale(1)
 
 

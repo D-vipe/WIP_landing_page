@@ -177,17 +177,25 @@ $(document).ready(() => {
         triangleAnimation.fromTo('#secondRing', .8, {rotate: -45}, {rotate: 45}, '<.1');
         triangleAnimation.to('.triangle-object', .8, {rotate: 0, x:0, y: 0, scale: 1}, '<0');
 
-        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(1) .outer-ring__cover', .8, {y: -60}, {y: 0}, '>.2');
-        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(2) .outer-ring__cover', .8, {y: 60}, {y: 0}, '<0');
-        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(3) .outer-ring__cover', .8, {y: -60}, {y: 0}, '<0');
-        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(4) .outer-ring__cover', .8, {y: 60}, {y: 0}, '<0');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(1) .outer-ring__cover', .8, {y: 60}, {y: 0}, '>.2');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(2) .outer-ring__cover', .8, {y: -60}, {y: 0}, '<0');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(3) .outer-ring__cover', .8, {y: 60}, {y: 0}, '<0');
+        triangleAnimation.fromTo('#secondRing .outer-ring__brick:nth-child(4) .outer-ring__cover', .8, {y: -60}, {y: 0}, '<0');
         triangleAnimation.to('.triangle-object', .3, {scale: .9}, '<0');
 
-        triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(1) .outer-ring__cover', .8, {y: -60}, '>.2');
+        triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(1) .outer-ring__cover', .8, {y: -60}, '>.5');
         triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(2) .outer-ring__cover', .8, {y: 60}, '<0');
         triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(3) .outer-ring__cover', .8, {y: -60}, '<0');
         triangleAnimation.to('#secondRing .outer-ring__brick:nth-child(4) .outer-ring__cover', .8, {y: 60}, '<0');
         triangleAnimation.to('.triangle-object', .3, {scale: 1}, '<.2');
+      }
+
+      if (index === 7) {
+        $('#presentationVid').find('video').show();
+        let titleLine = gsap.timeline();
+        titleLine.fromTo('.overlay-title__container .section-title:nth-child(1)', 1, {x: -1000}, {x: 0});
+        titleLine.fromTo('.overlay-title__container .section-title:nth-child(2)', 1, {x: -900}, {x: 0}, '<.2');
+        titleLine.fromTo('.overlay-title__container .section-title:nth-child(3)', 1, {x: -800}, {x: 0}, '<.2');
       }
     },  // This option accepts a callback function. The function will be called before the page moves.
     afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.

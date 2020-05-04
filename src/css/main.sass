@@ -12,6 +12,8 @@
   flex-flow: column
   justify-content: space-between
   overflow: hidden
+  +mobile
+    padding: 20px 27px
 
 .overflow-wrap
   overflow: hidden
@@ -31,6 +33,8 @@
     background-color: $main-color
     margin: 0 67px
     animation: curtainScroll .8s ease-out .3s forwards
+    +mobile
+      margin: 0
 
 .white-noise
   &:before
@@ -72,7 +76,11 @@
   justify-content: center
   overflow: hidden
   padding: 0 30px 30px 30px
-
+  +mobile
+    width: 100%
+    padding: 0
+    margin: 60px 0 20px 0
+    align-items: flex-start
 
 .fixed-navbar
   position: fixed
@@ -82,6 +90,9 @@
   display: flex
   justify-content: space-between
   padding: 0 70px
+  +mobile
+    padding: 0 20px
+    top: 44px
   .header-info
     position: relative
     display: flex
@@ -96,16 +107,24 @@
         display: flex
         flex-wrap: nowrap
         transform: translateX(-140px)
+        +mobile
+          transform: translateX(0)
       .logo-back
         background: url(../img/fill-1@3x.png) center no-repeat
         background-size: contain
         width: 36px
         height: 47px
+        +mobile
+          width: 28px
+          height: 35px
+          background-size: cover
       .logo-front
         background: url(../img/fill-2@3x.png) center no-repeat
         background-size: contain
         width: 24px
         height: 47px
+        +mobile
+          height: 37px
 
       .logo-middle
         display: flex
@@ -118,9 +137,15 @@
           width: 122px
           height: 41px
           margin-bottom: 10px
+          +mobile
+            background-size: cover
+            width: 92px
+            height: 30px
           &.white-logo
             background: url(../img/pike-black.png) center no-repeat
             background-size: cover
+            +mobile
+              background-size: contain
 
         .subtitle
           background: url(../img/medialab@3x.png) center no-repeat
@@ -128,9 +153,15 @@
           width: 124px
           height: 10px
           transform: translateY(-10px)
+          +mobile
+            width: 92px
+            transform: translateY(0)
+            background-size: contain
           &.white-logo
             background: url(../img/medialab-black.png) center no-repeat
             background-size: cover
+            +mobile
+              background-size: contain
 
     .header-info__text
       height: 128px
@@ -144,6 +175,8 @@
       letter-spacing: normal
       color: $plain-white
       margin-left: -135px
+      +mobile
+        display: none
     .button-block
       position: relative
       z-index: 5
@@ -156,6 +189,17 @@
   border: 1px solid $main-color
   &.button_main
     background-color: $main-color
+    +mobile
+      display: none
+    &.mobile
+      display: none
+      +mobile
+        display: block
+        background: url('../img/telephon@2x.png') center no-repeat
+        background-size: contain
+        border: none
+        width: 29px
+        height: 37px
 
 .video-bg
   position: absolute
@@ -170,6 +214,8 @@
     height: 100vh
     width: 100vw
     transform: scale(1.2)
+    +mobile
+      transform: scale(4) translateX(-100px)
 
 #sectionHeader
   height: 100%
@@ -191,10 +237,31 @@
     .logo__top
       height: 184px
       background: url('../img/pike.svg') left no-repeat
+      +mobile
+        height: 51px
+        background-size: contain
 
     .logo__bottom
       height: 184px
       background: url('../img/medialab.svg') left no-repeat
+      .part-top
+        display: none
+        +mobile
+          display: block
+          background: url('../img/media.svg') left no-repeat
+          height: 51px
+          background-size: contain
+          margin-top: 10px
+      .part-bottom
+        display: none
+        +mobile
+          display: block
+          background: url('../img/lab.svg') right no-repeat
+          height: 51px
+          background-size: contain
+          margin-top: 10px
+      +mobile
+        background: none
 
 .section-title
   font-size: 61px
@@ -216,6 +283,11 @@
       width: 12px
       height: 12px
       background-color: #01da00
+      +mobile
+        bottom: 5px
+        right: -15px
+        width: 8px
+        height: 8px
 
 .styled-list
   list-style: square
@@ -226,13 +298,27 @@
   line-height: 1.5
   letter-spacing: normal
   margin-left: 20px
+  +mobile
+    padding: 0 20px
+    margin: 0 20px
 
   li
     margin-bottom: 10px
+    +mobile
+      font-size: 14px
+      line-height: 1.57
+      font-weight: 300
 
 section
   .section-title
     margin-bottom: 65px
+    +mobile
+      font-size: 28px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 30px!important
+
   .boast-block
     display: flex
     align-items: center
@@ -243,6 +329,10 @@ section
     top: 43%
     right: 40px
     cursor: pointer
+    +mobile
+      width: 76px
+      height: 76px
+      top: 33%
     .boast-block__circle
       position: relative
       width: 100%
@@ -255,6 +345,9 @@ section
       height: 90px
       background: url('../img/rock-icon.png') center no-repeat
       background-size: cover
+      +mobile
+        width: 24px
+        height: 39px
 
     .hover__wrap
       position: absolute
@@ -296,6 +389,11 @@ section
   margin: 71px 0
   display: flex
   align-items: flex-end
+  +mobile
+    display: none
+    font-size: 40px
+    padding-left: 0
+    margin-bottom: 35px
 
   .dotted-title__dot
     width: 16px
@@ -304,6 +402,26 @@ section
     background-color: $main-color
     margin-bottom: 10px
     margin-left: 7px
+    +mobile
+      margin-bottom: 5px
+      width: 8px
+      height: 8px
+
+#integrationExperienceSlide
+  .client-slider
+    +mobile
+      display: block!important
+      padding-left: 27px!important
+  .owl-nav
+    +mobile
+      top: -60px!important
+      left: 30px
+      right: unset!important
+      button
+        width: 22px!important
+        height: 22px!important
+        border-top: 6px solid $main-color!important
+        border-left: 6px solid $main-color!important
 
 #sectionClients, #integrationExperienceSlide
   .owl-carousel
@@ -312,6 +430,8 @@ section
   .client-slider
     padding-left: 305px
     position: relative
+    +mobile
+      display: none
 
     .client-slider__item
       background-color: $plain-white
@@ -325,6 +445,8 @@ section
       justify-content: space-between
       &.main_background
         background-color: $main-color
+        .client-description
+          color: $plain-white
       .top-row
         h3
           font-size: 40px
@@ -407,3 +529,50 @@ section
 
 .dimmed-text
   color: #f2f2f2
+
+.mobile-object
+  display: none
+  +mobile
+    display: block
+    &.triangle-hub
+      background: url('../img/triangleHub.png') center no-repeat
+      -webkit-background-size: cover
+      background-size: cover
+      width: 120px
+      height: 120px
+    &.shellHub
+      background: url('../img/shellHub.png') center no-repeat
+      -webkit-background-size: cover
+      background-size: cover
+      width: 82px
+      height: 101px
+    &.ringsHub
+      background: url('../img/ringsHub.png') center no-repeat
+      -webkit-background-size: cover
+      background-size: cover
+      width: 120px
+      height: 120px
+    &.circleBricks
+      background: url('../img/circleBricks.png') center no-repeat
+      -webkit-background-size: cover
+      background-size: cover
+      width: 120px
+      height: 120px
+
+.hover-mobile-block
+  display: none
+  +mobile
+    display: block
+    width: 100%
+    background: $main-color
+    margin-bottom: 29px
+    padding: 28px 37px
+    p
+      font-size: 14px
+      font-weight: 300
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.57
+      letter-spacing: normal
+      color: #000000
+

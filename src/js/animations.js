@@ -21,9 +21,11 @@ $(document).ready(() => {
 
       if (index === 1) {
         $('.video-bg').find('video').show();
-        gsap.to('#slidingPart', {x: -140, duration: .8});
-        gsap.to('.subtitle', {y: -10, duration: .5});
-        gsap.fromTo('.header-info__text', {y: -500}, {y: 0, duration: 1});
+        if (screen.width >= 768) {
+          gsap.to('#slidingPart', {x: -140, duration: .8});
+          gsap.to('.subtitle', {y: -10, duration: .5});
+          gsap.fromTo('.header-info__text', {y: -500}, {y: 0, duration: 1});
+        }
         gsap.fromTo('.logo__top', {x: 4500, y: -1000}, {x: 0, y: 0, duration: 1});
         gsap.fromTo('.logo__bottom', {x: -3800, y: -600}, {x: 0, y: 0, duration: 1});
       }
@@ -76,6 +78,12 @@ $(document).ready(() => {
       }
 
       if (index === 3) {
+        if (screen.width >= 768) {
+          $("#fullpage").moveTo(4);
+        }
+      }
+
+      if (index === 4) {
         $('#sectionClients').addClass('lighten');
 
         let logoTl = gsap.timeline();
@@ -114,7 +122,7 @@ $(document).ready(() => {
         figureHub.to('.short-black-line', .3, {y: 0});
       }
 
-      if (index === 4) {
+      if (index === 5) {
         gsap.fromTo('#digitalArchive .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
         gsap.fromTo('#digitalArchive .boast-block', 2.5, {y: 600, opacity: 0}, {y: 0, opacity: 1}, '<.2');
         gsap.fromTo('#digitalArchive .styled-list', 2.2, {y: 800, opacity: 0}, {y: 0, opacity: 1});
@@ -139,7 +147,7 @@ $(document).ready(() => {
         });
       }
 
-      if (index === 5) {
+      if (index === 6) {
         gsap.set('#signalTransmission .fourth-ring', {opacity: 0});
         gsap.set('#signalTransmission .third-ring', {opacity: 0});
         gsap.set('#signalTransmission .second-ring', {opacity: 0});
@@ -154,7 +162,7 @@ $(document).ready(() => {
         circleHub.fromTo('#signalTransmission .second-ring', 1.5, {rotate: 395}, {rotate: 50, opacity: 1}, '<.3');
       }
 
-      if (index === 6) {
+      if (index === 7) {
         gsap.fromTo('#promoSection .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
         gsap.fromTo('#promoSection .boast-block', {y: 500, opacity: 0}, {y: 0, opacity: 1, duration: 3}, '<.2');
         gsap.fromTo('#promoSection .styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2}, '<.3');
@@ -190,7 +198,12 @@ $(document).ready(() => {
         triangleAnimation.to('.triangle-object', .3, {scale: 1}, '<.2');
       }
 
-      if (index === 7) {
+      if (index === 8) {
+        if (screen.width > 768) {
+          setTimeout(()=>{
+            $('#PMLSection').find('video').get(0).play();
+          }, 800);
+        }
         $('#presentationVid').find('video').show();
         let titleLine = gsap.timeline();
         titleLine.fromTo('.overlay-title__container .section-title:nth-child(1)', 1, {x: -1000}, {x: 0});
@@ -198,7 +211,7 @@ $(document).ready(() => {
         titleLine.fromTo('.overlay-title__container .section-title:nth-child(3)', 1, {x: -800}, {x: 0}, '<.2');
       }
 
-      if (index === 8) {
+      if (index === 9) {
         lightTitle();
         gsap.set('#integrationSlide .triangle-right', {opacity: 0, x: -100});
         gsap.set('#integrationSlide .triangle-right .custom-list', {opacity: 0, x: -60});
@@ -209,13 +222,21 @@ $(document).ready(() => {
 
       }
 
-      if (index === 9) {
+      if (index === 10) {
         setTimeout(() => {
           darkTitle();
+          if (screen.width > 768) {
+            $('#integrationExperienceSlide').find('video').get(0).play();
+          }
         },1000);
         $('.video-bg').find('video').show();
         gsap.fromTo('#integrationExperienceSlide .dotted-title', .6, {opacity: 0}, {opacity: 1, delay: .6});
         gsap.fromTo('#integrationExperienceSlide .owl-stage-outer', 1, {x: 1500, opacity: 0}, {x: 0, opacity: 1, delay: 1});
+      }
+
+      if (index === 10 && screen.width < 768) {
+        gsap.fromTo('#integrationExperienceSlide .dotted-title', .6, {opacity: 0}, {opacity: 1, delay: .6});
+        gsap.fromTo('#integrationExperienceSlide .owl-stage-outer, .owl-nav', 1, {x: 1500, opacity: 0}, {x: 0, opacity: 1, delay: 1});
       }
 
       /*
@@ -234,7 +255,7 @@ $(document).ready(() => {
     },   // This option accepts a callback function. The function will be called after the page moves.
 
     loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-    keyboard: true,                  // You can activate the keyboard controls                          // the browser's width is less than 600, the fallback will kick in.
+    keyboard: true,                  // You can activate the keyboard controls
     direction: "vertical",            // You can now define the direction of the One Page Scroll// animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 

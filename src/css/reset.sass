@@ -89,14 +89,22 @@ button
   height: 200px
   background: #000
   position: relative
+  +mobile
+    min-width: unset
+    height: 509px
   .section-container
     max-width: 1040px
     margin: 0 auto
     padding: 52px 0
     flex-direction: row
+    +mobile
+      flex-direction: column
 
     .left-side
       display: flex
+      +mobile
+        flex-direction: column
+        padding: 0 27px
 
       .logo
         background: url('../img/logo-light.png') center no-repeat
@@ -104,6 +112,11 @@ button
         width: 169px
         height: 54px
         margin-right: 114px
+        +mobile
+          background: url('../img/logo-light-mobile.svg') center no-repeat
+          -webkit-background-size: contain
+          background-size: contain
+          margin-bottom: 94px
       .contact-block
         ul
           li
@@ -122,15 +135,23 @@ button
       display: flex
       flex-direction: column
       justify-content: space-between
+      +mobile
+        padding: 0 27px
       .social-block
         display: flex
         flex-flow: nowrap
         align-items: center
+        +mobile
+          display: grid
+          grid-template-columns: 1fr 1fr 1fr 1fr
+          grid-gap: 20px
 
         a
           background-size: cover
           background-position: center
           margin: 0 19px
+          +mobile
+            margin: 0 auto 0 0
           &:hover
             text-decoration: none
           &.vk
@@ -165,10 +186,19 @@ button
             margin-left: 0
           &:last-child
             margin-right: 0
+            +mobile
+              margin-right: auto
 
       .company-link
         margin-bottom: 30px
         text-align: right
+        .hover-highlight
+          &:hover
+            color: $main-hover
+        +mobile
+          margin-bottom: 0
+          text-align: left
+          margin-top: 40px
 
         a
           font-size: 16px

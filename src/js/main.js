@@ -10,15 +10,30 @@ $(document).ready(() => {
     loop: false,
     nav: true,
     dots: false,
-    stagePadding: 150
+    stagePadding: 150,
+    responsiveClass:true,
+    responsive: {
+      320: {
+        items: 1,
+        stagePadding: 0
+      }
+    }
+  });
+
+  $('#clientSliderMobile').owlCarousel({
+    loop: false,
+    nav: true,
+    dots: false,
+    items: 1,
   });
 
    // const video = document.querySelector('video');
 
-   setTimeout(()=>{
-     $('.video-bg').find('video').get(0).play();
-   }, 800);
-
+   if (screen.width > 768) {
+     setTimeout(()=>{
+       $('.video-bg').find('video').get(0).play();
+     }, 800);
+  }
 
    function checkTelephone(telValue) {
      let exp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
@@ -98,6 +113,11 @@ $(document).ready(() => {
        confirmFormSubmit();
      }
    });
+
+   $('.button_callback').click(function () {
+     console.log(123);
+   });
+
 
    // function handleVideoResize() {
    //    console.log('video resize');

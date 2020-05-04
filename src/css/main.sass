@@ -157,6 +157,20 @@
   &.button_main
     background-color: $main-color
 
+.video-bg
+  position: absolute
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  opacity: .95
+  //background-color: $plain-black
+  background: url('../img/dark-noise.gif')
+  video
+    height: 100vh
+    width: 100vw
+    transform: scale(1.2)
+
 #sectionHeader
   height: 100%
   object-fit: contain
@@ -168,19 +182,6 @@
     display: flex
     justify-content: space-between
     align-items: flex-start
-  .video-bg
-    position: absolute
-    top: 0
-    left: 0
-    height: 100vh
-    width: 100vw
-    opacity: .95
-    //background-color: $plain-black
-    background: url('../img/dark-noise.gif')
-    video
-      height: 100vh
-      width: 100vw
-      transform: scale(1.2)
 
   .logo
     display: block
@@ -283,3 +284,123 @@ section
         transform: scale(1)
 
 
+.dotted-title
+  font-size: 80px
+  font-weight: bold
+  font-stretch: normal
+  font-style: normal
+  line-height: 1
+  letter-spacing: -1.7px
+  color: $plain-white
+  padding-left: 305px
+  margin: 71px 0
+  display: flex
+  align-items: flex-end
+
+  .dotted-title__dot
+    width: 16px
+    height: 16px
+    display: block
+    background-color: $main-color
+    margin-bottom: 10px
+    margin-left: 7px
+
+#sectionClients, #integrationExperienceSlide
+  .owl-carousel
+    .owl-stage
+      padding-left: 0!important
+  .client-slider
+    padding-left: 305px
+    position: relative
+
+    .client-slider__item
+      background-color: $plain-white
+      max-width: 500px
+      min-height: 397px
+      max-height: 397px
+      overflow: hidden
+      padding: 36px 34px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      &.main_background
+        background-color: $main-color
+      .top-row
+        h3
+          font-size: 40px
+          font-weight: bold
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.15
+          letter-spacing: -0.85px
+          color: $plain-black
+      .bottom-row
+        display: flex
+        flex-direction: row
+        flex-flow: nowrap
+        justify-content: space-between
+        align-items: flex-end
+
+        .client-description
+          font-size: 16px
+          font-weight: normal
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.5
+          letter-spacing: normal
+
+        .client-logo
+          .zvezda
+            width: 200px
+            height: 63px
+          .zero-media
+            width: 95px
+            height: 103px
+          .ct-vgtrk
+            width: 200px
+            height: 121px
+            margin-left: -40px
+          .first-st
+            width: 100%
+            height: 111px
+          .strim
+            width: 179px
+            height: 50px
+  .owl-nav
+    position: absolute
+    top: -120px
+    right: 20%
+    margin-top: 0
+    opacity: 0
+
+    button
+      display: inline-block
+      //position: absolute
+      width: 30px
+      height: 30px
+      background: transparent
+      text-indent: -9999px
+      border-top: 8px solid $main-color
+      border-left: 8px solid $main-color
+      transition: all 250ms ease-in-out
+      text-decoration: none
+      color: transparent
+      &:before
+        display: block
+        height: 200%
+        width: 200%
+        margin-left: -50%
+        margin-top: -50%
+        content: ""
+        transform: rotate(45deg)
+      &.owl-prev
+        transform: rotate(-45deg)
+        left: 0
+      &.owl-next
+        transform: rotate(135deg)
+        right: 0
+.overlay-background
+  width: 100%
+  position: absolute
+  height: 595px
+  background: rgba(0,0,0,.5)

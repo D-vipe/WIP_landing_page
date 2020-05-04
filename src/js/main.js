@@ -1,10 +1,17 @@
 $(document).ready(() => {
-    $('.client-slider').owlCarousel({
+    $('#clientSlider').owlCarousel({
       loop: false,
       nav: true,
       dots: false,
       stagePadding: 50
     });
+
+  $('#experienceSlider').owlCarousel({
+    loop: false,
+    nav: true,
+    dots: false,
+    stagePadding: 150
+  });
 
    // const video = document.querySelector('video');
 

@@ -116,9 +116,9 @@ $(document).ready(() => {
 
       if (index === 4) {
         gsap.fromTo('#digitalArchive .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
-        gsap.fromTo('.boast-block', {y: 330, opacity: 0}, {y: 0, opacity: 1, duration: 2});
-        gsap.fromTo('#digitalArchive .styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2.2});
-        gsap.fromTo('.boast-block__circle', {rotate: -200}, {rotate: 0, duration: 3});
+        gsap.fromTo('#digitalArchive .boast-block', 2.5, {y: 600, opacity: 0}, {y: 0, opacity: 1}, '<.2');
+        gsap.fromTo('#digitalArchive .styled-list', 2.2, {y: 800, opacity: 0}, {y: 0, opacity: 1});
+        gsap.fromTo('.boast-block__circle', 3, {rotate: -200}, {rotate: 0});
 
         //object animation
         let figureHub = gsap.timeline();
@@ -156,7 +156,7 @@ $(document).ready(() => {
 
       if (index === 6) {
         gsap.fromTo('#promoSection .section-title', {y: 600, opacity: 0}, {y: 0, opacity: 1, duration: 2});
-        gsap.fromTo('#promoSection .boast-block', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 3}, '<.2');
+        gsap.fromTo('#promoSection .boast-block', {y: 500, opacity: 0}, {y: 0, opacity: 1, duration: 3}, '<.2');
         gsap.fromTo('#promoSection .styled-list', {y: 800, opacity: 0}, {y: 0, opacity: 1, duration: 2}, '<.3');
         gsap.fromTo('.boast-block__circle', {rotate: -200}, {rotate: 0, duration: 3.5});
 
@@ -196,6 +196,26 @@ $(document).ready(() => {
         titleLine.fromTo('.overlay-title__container .section-title:nth-child(1)', 1, {x: -1000}, {x: 0});
         titleLine.fromTo('.overlay-title__container .section-title:nth-child(2)', 1, {x: -900}, {x: 0}, '<.2');
         titleLine.fromTo('.overlay-title__container .section-title:nth-child(3)', 1, {x: -800}, {x: 0}, '<.2');
+      }
+
+      if (index === 8) {
+        lightTitle();
+        gsap.set('#integrationSlide .triangle-right', {opacity: 0, x: -100});
+        gsap.set('#integrationSlide .triangle-right .custom-list', {opacity: 0, x: -60});
+
+        let integrationLine = gsap.timeline();
+        integrationLine.to('#integrationSlide .triangle-right', 1.4, {opacity: 1, x: 0, stagger: .6, delay: .8});
+        integrationLine.to('#integrationSlide .triangle-right .custom-list', .8, {opacity: 1, x: 0, stagger: .6}, '<.8')
+
+      }
+
+      if (index === 9) {
+        setTimeout(() => {
+          darkTitle();
+        },1000);
+        $('.video-bg').find('video').show();
+        gsap.fromTo('#integrationExperienceSlide .dotted-title', .6, {opacity: 0}, {opacity: 1, delay: .6});
+        gsap.fromTo('#integrationExperienceSlide .owl-stage-outer', 1, {x: 1500, opacity: 0}, {x: 0, opacity: 1, delay: 1});
       }
     },  // This option accepts a callback function. The function will be called before the page moves.
     afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.

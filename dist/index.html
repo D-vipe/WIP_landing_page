@@ -59,6 +59,7 @@
 			</section>
 			<!-- First slide end -->
 			<!--Second slide-->
+
 			<section id="sectionClients" class="dark-noise">
 				<div class="section-container">
 					<div class="row">
@@ -170,9 +171,11 @@
 					</div>
 				</div>
 			</section>
+
 			<!--Second slide end-->
 
 			<!--Third slide-->
+
 			<section id="sectionConstructor" class="white-noise">
                 <div class="section-container">
                     <div class="column align-center">
@@ -209,9 +212,11 @@
 					</div>
                 </div>
             </section>
+
 			<!--Third slide end-->
 
 			<!--Fourth slide-->
+
 			<section id="digitalArchive" class="white-noise">
 				<div class="section-container">
 					<div class="column object-container">
@@ -262,9 +267,11 @@
 					</div>
 				</div>
 			</section>
+
 			<!--Fourth slide end-->
 
 			<!--Fifth slide-->
+
 			<section id="signalTransmission" class="white-noise">
 				<div class="section-container">
 					<div class="column align-center">
@@ -293,9 +300,11 @@
 					</div>
 				</div>
 			</section>
+
 			<!--Fifth slide end-->
 
             <!--Sixth slide-->
+
             <section id="promoSection" class="white-noise">
                 <div class="section-container">
                     <div class="column object-container">
@@ -352,8 +361,11 @@
                     </div>
                 </div>
             </section>
+
             <!--Sixth slide end-->
+
 			<!--Seventh slide-->
+
 			<section id="PMLSection" class="white-noise">
 				<div class="section-container">
 					<div class="video-bg" id="presentationVid">
@@ -383,9 +395,11 @@
 					</div>
 				</div>
 			</section>
+
 			<!--Seventh slide end-->
 
 			<!--Eighth slide-->
+
 			<section id="integrationSlide" class="white-noise">
 				<div class="section-container">
 					<div class="figure-wrapper">
@@ -413,8 +427,11 @@
 					</div>
 				</div>
 			</section>
+
 			<!--Eighth slide end-->
+
 			<!--Ninth slide-->
+
 			<section id="integrationExperienceSlide" class="dark-noise">
 				<div class="section-container">
 					<div class="video-bg">
@@ -488,6 +505,7 @@
 					</div>
 				</div>
 			</section>
+
 			<!--Ninth slide end-->
 			<!--Form slide-->
 			<section id="contactForm" class="dark-noise">
@@ -498,25 +516,29 @@
 						</h2>
 					</div>
 					<div class="row">
-						<div class="form-help-text">
+						<div class="half-block form-help-text">
 							<p>Возникли вопросы или хотите оценить стоимость проекта? Оставьте заявку и наш менеджер с вами свяжется.</p>
 						</div>
-						<div class="form-wrap">
-							<form action="/contact">
+						<div class="half-block form-wrap">
+							<form action="/contact" id="pageForm">
 								<div class="input-group">
-									<label for="contactName">Ваше имя</label>
-									<input type="text" id="contactName">
+									<!--<label for="contactName">Ваше имя</label>-->
+									<input type="text" name="name" placeholder="Ваше имя">
 								</div>
 
 								<div class="input-group">
-									<label for="contactPhone">Телефон</label>
-									<input type="text" id="contactPhone">
+									<!--<label for="contactPhone">Телефон</label>-->
+									<input type="tel"
+										   name="tel" placeholder="Телефон">
+									<small class="error-message"></small>
 								</div>
 
 								<div class="input-group">
-									<label for="contactComment">Сообщение</label>
-									<input type="text" id="contactComment">
+									<textarea name="comment"> Сообщение </textarea>
 								</div>
+                                <div class="button-group">
+                                    <button class="submit-button" type="submit">Отправить</button>
+                                </div>
 							</form>
 						</div>
 					</div>
@@ -525,9 +547,37 @@
 			<!--Form slide end-->
 
 	</div>
-<!-- 	<footer class="footer">
-		Copyright
-	</footer> -->
+
+    <footer class="footer">
+		<div class="section-container">
+			<div class="left-side">
+				<div class="logo">
+				</div>
+				<div class="contact-block">
+					<ul>
+						<li><a href="tel:84993222971"></a>+7 499 322 29 71</li>
+						<li><a href="mailto:hello@pikemedia.ru">hello@pikemedia.ru</a></li>
+						<li>115162, Москва, ул. Шухова, 14</li>
+					</ul>
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="social-block">
+					<a href="http://red-is.ru/" target="_blank" class="icon vk"></a>
+					<a href="http://red-is.ru/" target="_blank" class="icon fb"></a>
+					<a href="http://red-is.ru/" target="_blank" class="icon insta"></a>
+					<a href="http://red-is.ru/" target="_blank" class="icon ok"></a>
+					<a href="http://red-is.ru/" target="_blank" class="icon twitter"></a>
+					<a href="http://red-is.ru/" target="_blank" class="icon switch"></a>
+					<a href="http://red-is.ru/" target="_blank" class="icon youtube"></a>
+				</div>
+				<div class="company-link">
+					<a href="http://red-is.ru/" target="_blank">Redis — <span class="dimmed-text">создание
+						сайта</span></a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	</body>
 	<script type="text/javascript" src="main.js"></script>

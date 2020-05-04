@@ -217,8 +217,22 @@ $(document).ready(() => {
         gsap.fromTo('#integrationExperienceSlide .dotted-title', .6, {opacity: 0}, {opacity: 1, delay: .6});
         gsap.fromTo('#integrationExperienceSlide .owl-stage-outer', 1, {x: 1500, opacity: 0}, {x: 0, opacity: 1, delay: 1});
       }
+
+      /*
+        Fallback to let users see footer when they reach the last slide
+      */
+      let sectionsAmount = $('section').length;
+      if (index === sectionsAmount) {
+        $('body').css({'overflow': 'auto'});
+      } else {
+        $('body').css({'overflow': 'hidden'});
+        // $("#fullpage").moveTo(sectionsAmount);
+      }
+
     },  // This option accepts a callback function. The function will be called before the page moves.
-    afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+    afterMove: function(index) {
+    },   // This option accepts a callback function. The function will be called after the page moves.
+
     loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     keyboard: true,                  // You can activate the keyboard controls                          // the browser's width is less than 600, the fallback will kick in.
     direction: "vertical",            // You can now define the direction of the One Page Scroll// animation. Options available are "vertical" and "horizontal". The default value is "vertical".

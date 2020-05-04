@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section
 
 body
   line-height: 1
+  &.overflow
+    overflow: auto
 
 ol, ul
   list-style: none
@@ -42,6 +44,8 @@ table
   border-collapse: collapse
   border-spacing: 0
 
+section
+  position: relative
 
 html
   height: 100%
@@ -80,8 +84,103 @@ button
 
 
 .footer
-  margin: -200px auto 0
+  //margin: -200px auto 0
   min-width: 1000px
   height: 200px
-  background: #BFF08E
+  background: #000
   position: relative
+  .section-container
+    max-width: 1040px
+    margin: 0 auto
+    padding: 52px 0
+    flex-direction: row
+
+    .left-side
+      display: flex
+
+      .logo
+        background: url('../img/logo-light.png') center no-repeat
+        background-size: cover
+        width: 169px
+        height: 54px
+        margin-right: 114px
+      .contact-block
+        ul
+          li
+            font-size: 16px
+            font-weight: normal
+            font-stretch: normal
+            font-style: normal
+            line-height: 1.5
+            letter-spacing: normal
+            color: #ffffff
+            a
+              @extend li
+              text-decoration: none
+
+    .right-side
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .social-block
+        display: flex
+        flex-flow: nowrap
+        align-items: center
+
+        a
+          background-size: cover
+          background-position: center
+          margin: 0 19px
+          &:hover
+            text-decoration: none
+          &.vk
+            width: 29px
+            height: 16px
+            background-image: url('../img/vk@2x.png')
+          &.fb
+            width: 12px
+            height: 24px
+            background-image: url('../img/facebook@2x.png')
+          &.insta
+            width: 20px
+            height: 20px
+            background-image: url('../img/insta@2x.png')
+          &.ok
+            width: 13px
+            height: 23px
+            background-image: url('../img/ok@2x.png')
+          &.twitter
+            width: 23px
+            height: 20px
+            background-image: url('../img/twitter@2x.png')
+          &.switch
+            width: 20px
+            height: 20px
+            background-image: url('../img/switch@2x.png')
+          &.youtube
+            width: 29px
+            height: 20px
+            background-image: url('../img/youtube@2x.png')
+          &:first-child
+            margin-left: 0
+          &:last-child
+            margin-right: 0
+
+      .company-link
+        margin-bottom: 30px
+        text-align: right
+
+        a
+          font-size: 16px
+          font-weight: normal
+          font-stretch: normal
+          font-style: normal
+          line-height: normal
+          letter-spacing: normal
+          text-align: right
+          color: #7f7f7f
+          text-decoration: none
+          &:focus
+            text-decoration: none
+          &:hover
+            text-decoration: none

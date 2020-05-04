@@ -418,3 +418,89 @@
       font-style: normal!important
       line-height: 1.46!important
       letter-spacing: normal!important
+
+#contactForm
+  .section-container
+    justify-content: flex-start
+    max-width: 1040px
+    padding: 0
+    margin: 0 auto
+  .section-title
+    margin-top: 181px
+    .dot-highlighted
+      font-size: 80px
+      color: $plain-white
+  .row
+    display: flex
+  .half-block
+    max-width: 50%
+    &.form-help-text
+      margin-right: 144px
+      p
+        width: 361px
+        height: 72px
+        font-size: 16px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.5
+        letter-spacing: normal
+        color: $main-color
+    &.form-wrap
+      width: 100%
+
+  .form-wrap
+
+    .input-group
+      display: flex
+      flex-direction: column
+      margin-bottom: 46px
+      position: relative
+
+      .error-message
+        display: none
+        font-size: 14px
+        position: absolute
+        color: $plain-red
+        bottom: -25px
+        left: 0
+
+      input, textarea
+        border: none
+        background: transparent
+        border-bottom: 2px solid $main-color
+        font-size: 24px
+        color: $plain-white
+        padding-bottom: 20px
+        &:focus
+          outline: none
+          &::placeholder
+            opacity: 0
+        &::placeholder
+          font-size: 16px
+          line-height: 1.5
+          color: $plain-white
+          transition: all .3s
+        &.error
+          border-bottom: 2px solid $plain-red
+      textarea
+        font-size: 16px
+    .button-group
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 169px
+      height: 50px
+      background-color: #01da00
+
+      button
+        width: 100%
+        font-size: 12px
+        font-weight: 500
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 1.01px
+        text-align: center
+        color: $plain-black
+

@@ -3,7 +3,19 @@ $(document).ready(() => {
       loop: false,
       nav: true,
       dots: false,
-      stagePadding: 50
+      stagePadding: 50,
+      responsive: {
+        320: {
+          items: 1,
+          stagePadding: 0
+        },
+        768: {
+          items: 2
+        },
+        1440: {
+          items: 3
+        }
+      }
     });
 
   $('#experienceSlider').owlCarousel({
@@ -16,6 +28,12 @@ $(document).ready(() => {
       320: {
         items: 1,
         stagePadding: 0
+      },
+      768: {
+        items: 2
+      },
+      1440: {
+        items: 3
       }
     }
   });

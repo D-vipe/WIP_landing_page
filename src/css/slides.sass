@@ -7,7 +7,7 @@
   .advantages
     display: flex
     flex-direction: row
-    flex-flow: wrap
+    flex-flow: nowrap
     padding-top: 134px
     padding-left: 305px
     +mobile
@@ -75,6 +75,9 @@
         transition: all 250ms ease-in-out
         text-decoration: none
         color: transparent
+        &:hover
+          border-top: 6px solid $main-hover
+          border-left: 6px solid $main-hover
         &:before
           display: block
           height: 200%
@@ -474,6 +477,13 @@
     align-items: center
     padding: 0
 
+    a
+      position: relative
+      z-index: 10
+      text-decoration: none
+      &:focus
+        outline: none
+
   #presentationVid
     width: 100%
     height: 595px
@@ -746,7 +756,9 @@
       justify-content: center
       width: 169px
       height: 50px
-      background-color: #01da00
+      background-color: $main-color
+      &:hover
+        background-color: $main-hover
       +mobile
         width: 100%
 

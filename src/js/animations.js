@@ -77,6 +77,7 @@ $(document).ready(() => {
         gsap.to('.title', {opacity: 1, duration: .4})
       }
 
+      //Creates a bug. Impossible to go back to the second slide
       if (index === 3) {
         if (screen.width >= 768) {
           $("#fullpage").moveTo(4);

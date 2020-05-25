@@ -1,7 +1,16 @@
 const path = require('path');
-
+const webpack = require('webpack');
 
 module.exports = {
+  plugins: [
+    require('autoprefixer'),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
+  ],
+  mode: 'development',
   entry: './src/index.js',
   devServer: {
     contentBase: './dist',
@@ -22,20 +31,30 @@ module.exports = {
           'extract-loader',
           'css-loader',
           {
-            loader: 'resolve-url-loader',
-            // options: {
-            // 	sourceMap: true,
-            // 	sourceMapContents: false
-            // }
+            loader: 'resolve-url-loader'
           },
-          'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'postcss.config.js'
+              }
+            }
+          },
+          {
+            loader: "sass-loader",
+          }
         ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
-        use: [
-          'file-loader?name=img/[name].[ext]'
-        ],
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+          publicPath: 'images',
+          name: '[folder]/[name].[ext]'
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,

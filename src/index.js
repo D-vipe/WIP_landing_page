@@ -4,8 +4,8 @@ import './js/main.js';
 import './js/animations';
 
 /**
- * process all images to make webpack load them
+ * process all general to make webpack load them
  * @param r
  */
 function requireAll(r) { r.keys().forEach(r); }
-requireAll(require.context('./img/', true));
+requireAll(require.context('./general/', true));

@@ -5,7 +5,6 @@ import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 window.onload = () => {
-
   function lightTitle() {
     console.log('light bg');
     $('.title').addClass('white-logo');
@@ -20,6 +19,7 @@ window.onload = () => {
 
   //set blocks to initial animation position
 
+  return;
   //fourth slide
   gsap.set('#digitalArchive .section-title', {y: 600, opacity: 0});
   gsap.set('#digitalArchive .boast-block', {y: 600, opacity: 0});

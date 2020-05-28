@@ -1,0 +1,155 @@
+.fixed-navbar
+  position: fixed
+  top: 52px
+  left: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 0 70px
+  z-index: 6
+  +mobile
+    padding: 0 20px
+    top: 44px
+  .header-info
+    position: relative
+    display: flex
+    z-index: 2
+
+    &__logo
+      display: flex
+      align-items: flex-start
+      justify-content: center
+      margin-right: 40px
+
+#slidingPart
+  display: flex
+  flex-wrap: nowrap
+  transform: translateX(-140px)
+  +mobile
+    transform: translateX(0)
+
+.logo-back
+  background: url('../general/logo_parts/fill-1@3x.png') center no-repeat
+  background-size: contain
+  width: 36px
+  height: 47px
+  +mobile
+    width: 28px
+    height: 35px
+    background-size: cover
+
+.logo-front
+  background: url('../general/logo_parts/fill-2@3x.png') center no-repeat
+  background-size: contain
+  width: 24px
+  height: 47px
+  +mobile
+    height: 37px
+
+.logo-middle
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  margin: 0 10px
+
+  .title
+    background: url('../general/pike-light@3x.png') center no-repeat
+    background-size: cover
+    width: 122px
+    height: 41px
+    margin-bottom: 10px
+    +mobile
+      background-size: cover
+      width: 92px
+      height: 30px
+
+    &.white-logo
+      background: url('../general/pike-black.png') center no-repeat
+      background-size: cover
+      +mobile
+        background-size: contain
+
+.subtitle
+  background: url('../general/logo_parts/medialab@3x.png') center no-repeat
+  background-size: cover
+  width: 124px
+  height: 10px
+  transform: translateY(-10px)
+  +mobile
+    width: 92px
+    transform: translateY(0)
+    background-size: contain
+
+  &.white-logo
+    background: url('../general/logo_parts/medialab-black.png') center no-repeat
+    background-size: cover
+    +mobile
+      background-size: contain
+
+.header-info__text
+  height: 128px
+  max-width: 504px
+  font-family: 'GothamPro', sans-serif
+  font-size: 24px
+  font-weight: normal
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.33
+  letter-spacing: normal
+  color: $plain-white
+  margin-left: -135px
+  +mobile
+    display: none
+
+.button-block
+  position: relative
+  z-index: 5
+
+.logo
+  display: block
+  width: 100%
+  position: relative
+
+  &__top
+    height: 184px
+    background: url('../general/logo_parts/pike.png') left no-repeat
+    +mobile
+      height: 51px
+      background-size: contain
+
+  &__bottom
+    height: 184px
+    background: url('../general/logo_parts/medialab.svg') left no-repeat
+
+    .part-top
+      display: none
+      +mobile
+        display: block
+        background: url('../general/logo_parts/media.svg') left no-repeat
+        height: 51px
+        background-size: contain
+        margin-top: 10px
+
+    .part-bottom
+      display: none
+      +mobile
+        display: block
+        background: url('../general/logo_parts/lab.svg') right no-repeat
+        height: 51px
+        background-size: contain
+        margin-top: 10px
+
+    +mobile
+      background: none
+
+.mobile-info__text
+  display: none
+  +mobile
+    display: block
+    position: absolute
+    top: 120px
+    z-index: 5
+    color: #FFFFFF
+    margin: 0 27px
+    font-size: 14px
+    line-height: 22px

@@ -70,9 +70,10 @@ button
   height: auto !important
   padding-bottom: 200px
   //height: 100%
+  z-index: 1
   animation-name: wrapperToFront
   animation-delay: 2.2s
-  z-index: 1
+  animation-direction: normal
   animation-fill-mode: forwards
 
 
@@ -108,13 +109,13 @@ button
         padding: 0 27px
 
       .logo
-        background: url('../img/logo-light.png') center no-repeat
+        background: url('../general/logo_parts/logo-light.png') center no-repeat
         background-size: cover
         width: 169px
         height: 54px
         margin-right: 114px
         +mobile
-          background: url('../img/logo-light-mobile.svg') center no-repeat
+          background: url('../general/logo_parts/logo-light-mobile.svg') center no-repeat
           -webkit-background-size: contain
           background-size: contain
           margin-bottom: 94px
@@ -161,31 +162,31 @@ button
           &.vk
             width: 29px
             height: 16px
-            background-image: url('../img/vk@2x.png')
+            background-image: url('../general/social_icons/vk@2x.png')
           &.fb
             width: 12px
             height: 24px
-            background-image: url('../img/facebook@2x.png')
+            background-image: url('../general/social_icons/facebook@2x.png')
           &.insta
             width: 20px
             height: 20px
-            background-image: url('../img/insta@2x.png')
+            background-image: url('../general/social_icons/insta@2x.png')
           &.ok
             width: 13px
             height: 23px
-            background-image: url('../img/ok@2x.png')
+            background-image: url('../general/social_icons/ok@2x.png')
           &.twitter
             width: 23px
             height: 20px
-            background-image: url('../img/twitter@2x.png')
+            background-image: url('../general/social_icons/twitter@2x.png')
           &.switch
             width: 20px
             height: 20px
-            background-image: url('../img/switch@2x.png')
+            background-image: url('../general/social_icons/switch@2x.png')
           &.youtube
             width: 29px
             height: 20px
-            background-image: url('../img/youtube@2x.png')
+            background-image: url('../general/social_icons/youtube@2x.png')
           &:first-child
             margin-left: 0
           &:last-child

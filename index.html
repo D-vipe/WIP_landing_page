@@ -1,621 +1,652 @@
 <html>
-	<head>
-	<meta charset="utf-8" />
-	<title>Пайк Медиа Лаб | Производство телеканалов, трансляций, телемостов и контента</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="" />
-	<meta name="description" content="Мы создаем контент и обеспечиваем коммуникацию с аудиторией в любой вещательной среде. Сборка и выпуск телеканалов, производство промо, создание трансляций и виртуальных мероприятий, имиджевые и продающие ролики, анализ аудитории и вовлеченности зрителей." />
-	<link rel="shortcut icon" type="image/png" href="dist/img/logo-fish.png"/>
-	<!--<script-->
-		<!--src="https://code.jquery.com/jquery-3.4.1.js"-->
-		<!--integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="-->
-		<!--crossorigin="anonymous"></script>-->
-		<link rel="stylesheet" type="text/css" href="dist/style.css">
-	</head>
-	<body>
-		<div class="curtain">
-			<div class="curtain__container"></div>
-		</div>
-		<div class="fixed-navbar">
-			<div class="header-info">
-				<div class="header-info__logo">
-					<div class="logo-back"></div>
-					<div class="overflow-wrap">
-						<div id="slidingPart">
-							<div class="logo-middle">
-								<div class="title"></div>
-								<div class="overflow-wrap">
-									<div class="subtitle"></div>
-								</div>
-							</div>
-							<div class="logo-front"></div>
-						</div>
-					</div>
-				</div>
-				<!--<img class="header-info__img" src="./img/logo-fish@3x.png" width="60" height="48">-->
-				<div class="header-info__text">
-					Создаем телевещание в любой среде. Технологические услуги по подготовке и распространению для телеканалов и операторов VOD
-				</div>
-			</div>
-			<div class="button-block" id="firstSlideButton">
-				<button type="button" class="button button_callback button_main">связаться с нами</button>
-				<button type="button" class="button mobile button_callback button_main"></button>
-			</div>
-		</div>
-		<div class="wrapper" id="fullpage">
-			<!-- First slide -->
-			<section id="sectionHeader">
-				<div class="section-container">
-					<div class="video-bg">
-						<video width="100%" height="100%" loop="loop" muted="muted"
-							   poster="dist/img/1920-main-bgd.jpg">
-							<source src="dist/video/Presentacia_1_hq.mp4" type="video/mp4">
-					    </video>
-					</div>
-					<div class="row">
-						<div class="logo">
-							<div class="logo__top"></div>
-							<div class="logo__bottom">
-								<div class="part-top mobile"></div>
-								<div class="part-bottom mobile"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- First slide end -->
-			<!--Second slide-->
-
-			<section id="sectionClients" class="dark-noise">
-				<div class="section-container">
-					<div class="row">
-						<div class="advantages">
-							<div class="advantages__item">
-								<div class="advantages__header" id="firstCounter">0</div>
-								<div class="advantages__description">Часов контента мы <br/> обрабатываем ежегодно</div>
-							</div>
-
-							<div class="advantages__item">
-								<div class="advantages__header" id="secondCounter">0</div>
-								<div class="advantages__description">Телеканалов доверяют <br/> нам эфирную подготовку
-								</div>
-							</div>
-
-							<div class="advantages__item">
-								<div class="advantages__header" id="thirdCounter">0</div>
-								<div class="advantages__description">Телеканалов выпускаются <br/> в эфирном комплексе</div>
-							</div>
-
-							<div class="advantages__item">
-								<div class="advantages__header" id="fourthCounter">0</div>
-								<div class="advantages__description">Наград МедиаБренд <br/> и Promax за работы <br/> в промо</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<h2 class="dotted-title">
-							Клиенты
-							<span class="dotted-title__dot"></span>
-						</h2>
-					</div>
-					<div class="row">
-						<div class="client-slider owl-carousel owl-theme" id="clientSlider">
-							<div class="client-slider__item main_background">
-								<div class="top-row">
-									<h3>Телеканал <br/> «Звезда»</h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">
-										Цифровой архив <br/>медиа
-									</div>
-									<div class="client-logo">
-										<img class="zvezda" src="dist/img/logo-zvezda.png">
-									</div>
-								</div>
-							</div>
-							<div class="client-slider__item">
-								<div class="top-row">
-									<h3>0+ Media</h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">Полный технологический <br/> цикл сборки
-                                        телеканалов <br/> Создание промо</div>
-									<div class="client-logo">
-                                        <img class="zero-media"
-											 src="dist/img/0-media.png">
-                                    </div>
-								</div>
-							</div>
-							<div class="client-slider__item main_background">
-								<div class="top-row">
-									<h3>Цифровое <br/>
-                                        телевидение <br/>
-                                        ВГТРК</h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">
-                                        Полный технологический цикл сборки телеканалов <br/>
-                                        Медиаархив <br/>
-                                        Создание промо <br/>
-                                        Технологический сервис <br/>
-                                        Выпуск телеканалов в США <br/>
-                                    </div>
-									<div class="client-logo">
-                                        <img class="ct-vgtrk"
-                                             src="dist/img/ct-vgtrk.png">
-                                    </div>
-								</div>
-							</div>
-							<div class="client-slider__item">
-								<div class="top-row">
-									<h3>Компания <br/> «Первый канал. <br/> Всемирная сеть»</h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">
-                                        Технологический сервис <br/> замены рекламных блоков
-                                    </div>
-									<div class="client-logo">
-                                        <img class="first-st"
-                                             src="dist/img/1-st.png">
-                                    </div>
-								</div>
-							</div>
-                            <div class="client-slider__item main_background">
-                                <div class="top-row">
-                                    <h3>Телекомпания <br/> Стрим</h3>
-                                </div>
-                                <div class="bottom-row">
-                                    <div class="client-description">
-                                        Техническая поддержка <br/> выпуска телеканалов <br/> группы
-                                    </div>
-                                    <div class="client-logo">
-                                        <img class="strim" src="dist/img/strim.png">
-                                    </div>
-                                </div>
-                            </div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--Second slide end-->
-
-			<!--Third slide-->
-
-			<section id="sectionConstructor" class="white-noise">
-                <div class="section-container">
-                    <div class="column align-center">
-                        <h2 class="section-title">
-                            <span class="dot-highlighted">МедиаХаб</span>
-                            Конструктор <br/>
-                            технологических <br/>медианаук
-                        </h2>
-						<ul class="styled-list">
-							<li>Прием контента и оценка технического качества</li>
-							<li>Предэфирная подготовка и транскодирование контента</li>
-							<li>Перспективное и текущее планирование эфира</li>
-							<li>Управление рекламным трафиком</li>
-							<li>Архивирование эфирного контента</li>
-							<li>Отчетность для рекламодателей и правообладателей</li>
-							<li>Подготовка пакетов контента и расписаний для VOD</li>
-							<li>Мультиязычная локализация контента</li>
-						</ul>
+<head>
+    <meta charset="utf-8"/>
+    <title>Пайк Медиа Лаб | Производство телеканалов, трансляций, телемостов и контента</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content=""/>
+    <meta name="description"
+          content="Мы создаем контент и обеспечиваем коммуникацию с аудиторией в любой вещательной среде. Сборка и выпуск телеканалов, производство промо, создание трансляций и виртуальных мероприятий, имиджевые и продающие ролики, анализ аудитории и вовлеченности зрителей."/>
+    <!--<link rel="shortcut icon" type="image/png" href="./dist/images/logo_parts/logo-fish.png"/>-->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./dist/style.css">
+</head>
+<body>
+<div class="curtain">
+    <div class="curtain__container"></div>
+</div>
+<div class="fixed-navbar">
+    <div class="header-info">
+        <div class="header-info__logo">
+            <div class="logo-back"></div>
+            <div class="overflow-wrap">
+                <div id="slidingPart">
+                    <div class="logo-middle">
+                        <div class="title"></div>
+                        <div class="overflow-wrap">
+                            <div class="subtitle"></div>
+                        </div>
                     </div>
-					<div class="column object-container">
-						<div class="mobile-object triangle-hub"></div>
-						<div class="object-wrapper">
-							<div class="left-part">
-								<div class="triangle"></div>
-								<div class="long-black-line"></div>
-							</div>
-							<div class="right-part">
-								<div class="black-circle"></div>
-								<div id="bottomRighthub">
-									<div class="short-black-line"></div>
-									<div class="green-square"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <div class="logo-front"></div>
                 </div>
-                <div class="bottom_trigger"></div>
-            </section>
+            </div>
+        </div>
+        <!--<img class="header-info__img" src="./dist/images/logo_parts/logo-fish@3x.png" width="60" height="48">-->
+        <div class="header-info__text">
+            Создаем телевещание в любой среде. Технологические услуги по подготовке и распространению для
+            телеканалов и операторов VOD
+        </div>
+    </div>
+    <div class="button-block" id="firstSlideButton">
+        <button type="button" class="button button_callback button_main">связаться с нами</button>
+        <button type="button" class="button mobile button_callback button_main"></button>
+    </div>
+</div>
+<div class="wrapper" id="fullpage">
+    <!-- First slide -->
+    <section id="sectionHeader">
+        <div class="section-container">
+            <div class="video-bg">
+                <div class="mobile-info__text">
+                    Создаем телевещание в любой среде. Технологические услуги по подготовке и распространению для
+                    телеканалов и операторов VOD
+                </div>
+                <video width="100%" height="100%" loop="loop" muted="muted"
+                       poster="./dist/images/video_posters/1920-main-bgd.jpg">
+                    <source src="./assets/video_backgrounds/Presentacia_1_hq.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="row">
+                <div class="logo">
+                    <div class="logo__top"></div>
+                    <div class="logo__bottom">
+                        <div class="part-top mobile"></div>
+                        <div class="part-bottom mobile"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- First slide end -->
 
-			<!--Third slide end-->
+    <!--Second slide-->
 
-			<!--Fourth slide-->
-
-			<section id="digitalArchive" class="white-noise">
-				<div class="section-container">
-					<div class="column object-container">
-						<div class="mobile-object shellHub"></div>
-						<div class="object-wrapper">
-							<div class="top-line"></div>
-							<div class="brick-row first">
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-							</div>
-							<div class="line simple middle"></div>
-							<div class="brick-row second">
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-								<div class="brick green"></div>
-							</div>
-							<div class="line simple bottom"></div>
-						</div>
-					</div>
-					<div class="column align-center">
-						<h2 class="section-title">
-							<span class="dot-highlighted">Цифровой архив</span> <br>
-							Smart архивирование <br/> и надежное хранение <br/> исходных медиа -<br/>
-							материалов
-						</h2>
-						<div class="hover-mobile-block">
-							<p>
-								Интеграционный проект медиаархива номинирован на соискание премии Зворыкина Национальной ассоциации телевещателей
-							</p>
-						</div>
-						<ul class="styled-list">
-							<li>Координация приема и выдачи контента</li>
-							<li>Оценка технического качества</li>
-							<li>Емкость библиотеки 2,5 Петабайта</li>
-							<li>Пакетирование и цифровая доставка контента</li>
-						</ul>
-
-						<div class="boast-block">
-							<div class="hover__wrap">
-								<p>
-									Интеграционный проект медиаархива номинирован на соискание премии Зворыкина Национальной ассоциации телевещателей
-								</p>
-							</div>
-							<div class="boast-block__circle"></div>
-							<div class="boast-block__rock"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!--Fourth slide end-->
-
-			<!--Fifth slide-->
-
-			<section id="signalTransmission" class="white-noise">
-				<div class="section-container">
-					<div class="column align-center">
-						<h2 class="section-title">
-							<span class="dot-highlighted">Создание и доставка <br>сигнала</span>
-							Выпуск, наземная <br/>
-							и спутниковая доставка <br/>сигнала телеканалов
-						</h2>
-						<ul class="styled-list">
-							<li>Мониторинг 24х7х365 в эфирной аппаратной</li>
-							<li>Эфирный комплекс в России и США</li>
-							<li>Выпуск телеканалов, мониторинг и технический контроль 24х7</li>
-						</ul>
-					</div>
-
-					<div class="column object-container">
-						<div class="mobile-object ringsHub"></div>
-						<div class="object-wrapper">
-							<div class="fourth-ring">
-							</div>
-                            <div class="third-ring">
-                            </div>
-                            <div class="second-ring">
-                                <div class="circle"></div>
-                            </div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!--Fifth slide end-->
-
-            <!--Sixth slide-->
-
-            <section id="promoSection" class="white-noise">
-                <div class="section-container">
-                    <div class="column object-container">
-						<div class="mobile-object circleBricks"></div>
-                        <div class="object-wrapper">
-							<div class="outer-ring" id="firstRing">
-								<div class="outer-ring__brick bg-black"></div>
-								<div class="outer-ring__brick bg-black"></div>
-								<div class="outer-ring__brick bg-black"></div>
-								<div class="outer-ring__brick bg-black"></div>
-							</div>
-							<div class="outer-ring" id="secondRing">
-								<div class="outer-ring__brick bg-main">
-									<div class="outer-ring__cover"></div>
-								</div>
-								<div class="outer-ring__brick bg-main">
-									<div class="outer-ring__cover"></div>
-								</div>
-								<div class="outer-ring__brick bg-main">
-									<div class="outer-ring__cover"></div>
-								</div>
-								<div class="outer-ring__brick bg-main">
-									<div class="outer-ring__cover"></div>
-								</div>
-							</div>
-							<div class="triangle-object">
-								<div class="triangle-object__side"></div>
-								<div class="triangle-object__side"></div>
-								<div class="triangle-object__side"></div>
-							</div>
+    <section id="sectionClients" class="dark-noise">
+        <div class="section-container">
+            <div class="row">
+                <div class="advantages">
+                    <div class="advantages__item">
+                        <div class="advantages__header" id="firstCounter">10 000</div>
+                        <div class="advantages__description">Часов контента мы <br/> обрабатываем ежегодно
                         </div>
                     </div>
 
-                    <div class="column align-center">
-                        <h2 class="section-title">
-                            <span class="dot-highlighted">Создание промо</span> <br>
-							Разработка <br> фирменного стиля <br>
-							и промокампаний <br> телеканалов
-                        </h2>
-						<div class="hover-mobile-block">
-							<p>
-								Интеграционный проект медиаархива номинирован на соискание премии Зворыкина Национальной ассоциации телевещателей
-							</p>
-						</div>
-                        <ul class="styled-list">
-                            <li>Создание брендбуков телеканалов и отдельных <br> элементов оформления</li>
-                            <li>Производство монтажных и постановочных <br> промороликов</li>
-                            <li>Производство внеэфирных промоматериалов</li>
-                        </ul>
+                    <div class="advantages__item">
+                        <div class="advantages__header" id="secondCounter">20</div>
+                        <div class="advantages__description">Телеканалов доверяют <br/> нам эфирную подготовку
+                        </div>
+                    </div>
 
-                        <div class="boast-block">
-                            <div class="hover__wrap">
-                                <p>
-                                    Интеграционный проект медиаархива номинирован на соискание премии Зворыкина Национальной ассоциации телевещателей
-                                </p>
-                            </div>
-                            <div class="boast-block__circle"></div>
-                            <div class="boast-block__rock"></div>
+                    <div class="advantages__item">
+                        <div class="advantages__header" id="thirdCounter">50</div>
+                        <div class="advantages__description">Телеканалов выпускаются <br/> в эфирном комплексе
+                        </div>
+                    </div>
+
+                    <div class="advantages__item">
+                        <div class="advantages__header" id="fourthCounter">20</div>
+                        <div class="advantages__description">Наград МедиаБренд <br/> и Promax за работы <br/>
+                            в промо
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!--Sixth slide end-->
-
-			<!--Seventh slide-->
-
-			<section id="PMLSection" class="white-noise">
-				<div class="section-container">
-						<div class="video-bg" id="presentationVid">
-							<video width="100%" loop="loop" muted="muted"
-								   poster="dist/img/banner-bg.jpg">
-								<source src="dist/video/Presentacia_2_hq.mp4" type="video/mp4">
-							</video>
-						</div>
-					<div class="overlay-background"></div>
-					<div class="overlay-title">
-						<a href="http://red-is.ru/" target="_blank">
-							<div class="overlay-title__container">
-								<h2 class="section-title">
-									<span class="dot-highlighted">Съемки</span>
-								</h2>
-
-								<h2 class="section-title">
-									<span class="dot-highlighted">Трансляции</span>
-								</h2>
-
-								<h2 class="section-title">
-									<span class="dot-highlighted">Монетизация</span>
-								</h2>
-								<div class="presentation-logo">
-
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!--Seventh slide end-->
-
-			<!--Eighth slide-->
-
-			<section id="integrationSlide" class="white-noise">
-				<div class="section-container">
-                    <div class="mobile-object single-triangle">
-                        <ul class="custom-list">
-                            <li>Разработка технических <br> заданий, проектный <br> менеджмент и аудит
-                                <br> технологических решений
-                            </li>
-                            <li>Внедрение систем <br> менеджмента производства/<br>управления проектами</li>
-                            <li>Разработка технологических <br> циклов телевизионного <br>
-                                производства/производства <br> контента </li>
-                        </ul>
-                        <h2>
-                            Интеграция
-                        </h2>
+            </div>
+            <div class="row">
+                <h2 class="dotted-title">
+                    Клиенты
+                    <span class="dotted-title__dot"></span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="client-slider owl-carousel owl-theme" id="clientSlider">
+                    <div class="client-slider__item main_background">
+                        <div class="top-row">
+                            <h3>Телеканал <br/> «Звезда»</h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">
+                                Цифровой архив <br/>медиа
+                            </div>
+                            <div class="client-logo zvezda">
+                                <img src="./dist/images/partner_logos/logo-zvezda.png"
+                                     srcset="./dist/images/partner_logos/logo-zvezda.png 1x,
+                                     ./dist/images/partner_logos/logo-zvezda@2x.png 2x,
+                                     ./dist/images/partner_logos/logo-zvezda@3x.png 3x">
+                            </div>
+                        </div>
                     </div>
-					<div class="figure-wrapper">
-						<div class="triangle-right">
-							<ul class="custom-list">
-								<li>Разработка технических <br> заданий, проектный <br> менеджмент и аудит
-									<br> технологических решений
-								</li>
-							</ul>
-						</div>
-						<div class="triangle-right">
-							<ul class="custom-list">
-								<li>Внедрение систем <br> менеджмента производства/<br>управления проектами</li>
-							</ul>
-						</div>
-						<div class="triangle-right">
-							<ul class="custom-list">
-								<li>Разработка технологических <br> циклов телевизионного <br>
-									производства/производства <br> контента </li>
-							</ul>
-						</div>
-						<h2>
-							Интеграция
-						</h2>
-					</div>
-				</div>
-			</section>
+                    <div class="client-slider__item">
+                        <div class="top-row">
+                            <h3>0+ Media</h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">Полный технологический <br/> цикл сборки
+                                телеканалов <br/> Создание промо
+                            </div>
+                            <div class="client-logo zero-media">
+                                <img src="./dist/images/partner_logos/0-media.png"
+                                     srcset="./dist/images/partner_logos/0-media.png 1x,
+                                     ./dist/images/partner_logos/0-media@2x.png 2x,
+                                     ./dist/images/partner_logos/0-media@3x.png 3x">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item main_background">
+                        <div class="top-row">
+                            <h3>Цифровое <br/>
+                                телевидение <br/>
+                                ВГТРК</h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">
+                                Полный технологический цикл сборки телеканалов <br/>
+                                Медиаархив <br/>
+                                Создание промо <br/>
+                                Технологический сервис <br/>
+                                Выпуск телеканалов в США <br/>
+                            </div>
+                            <div class="client-logo ct-vgtrk">
+                                <img src="./dist/images/partner_logos/ct-vgtrk.png"
+                                     srcset="./dist/images/partner_logos/ct-vgtrk.png 1x,
+                                     ./dist/images/partner_logos/ct-vgtrk@2x.png 2x,
+                                     ./dist/images/partner_logos/ct-vgtrk@3x.png 3x">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item">
+                        <div class="top-row">
+                            <h3>Компания <br/> «Первый канал. <br/> Всемирная сеть»</h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">
+                                Технологический сервис <br/> замены рекламных блоков
+                            </div>
+                            <div class="client-logo first-st">
+                                <img
+                                     src="./dist/images/partner_logos/1-st-mobile.png"
+                                     srcset="./dist/images/partner_logos/1-st-mobile.png 1x,
+                                     ./dist/images/partner_logos/1-st-mobile@2x.png 2x,
+                                     ./dist/images/partner_logos/1-st-mobile@3x.png 3x">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item main_background">
+                        <div class="top-row">
+                            <h3>Телекомпания <br/> Стрим</h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">
+                                Техническая поддержка <br/> выпуска телеканалов <br/> группы
+                            </div>
+                            <div class="client-logo strim">
+                                <img src="./dist/images/partner_logos/strim.png"
+                                     srcset="./dist/images/partner_logos/strim.png 1x,
+                                     ./dist/images/partner_logos/strim@2x.png 2x,
+                                     ./dist/images/partner_logos/strim@3x.png 3x">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<!--Eighth slide end-->
+    <!--Second slide end-->
 
-			<!--Ninth slide-->
+    <!--Third slide-->
 
-			<section id="integrationExperienceSlide" class="dark-noise">
-				<div class="section-container">
-					<div class="video-bg">
-						<video width="100%" height="100%" loop="loop" muted="muted"
-							   poster="dist/img/Integration_bg.jpg">
-							<source src="dist/video/Presentacia_3_hq.mp4" type="video/mp4">
-						</video>
-					</div>
-					<div class="overlay-background"></div>
-					<div class="row">
-						<h2 class="dotted-title">
-							Наш опыт <br> интеграции
-							<span class="dotted-title__dot"></span>
-						</h2>
-					</div>
-					<div class="row">
-						<div class="client-slider owl-carousel owl-theme" id="experienceSlider">
-							<div class="client-slider__item main_background">
-								<div class="top-row">
-									<h3>Создание эфирной аппаратной <br> на 90 телеканалов</h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">
-										/ 2018
-									</div>
-								</div>
-							</div>
-							<div class="client-slider__item">
-								<div class="top-row">
-									<h3>Создание эфирного комплекса <br> телеканалов на технологии <br>
-										IPuncompressed SAM-Grass <br> Valley </h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">/ 21 телеканал / 2018</div>
-								</div>
-							</div>
-							<div class="client-slider__item main_background">
-								<div class="top-row">
-									<h3>Разработка проекта облачного <br> выпуска и доставки телеканала на
-										<br>
-										территории США </h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">
-										/ 2017–2018
-									</div>
-								</div>
-							</div>
-							<div class="client-slider__item">
-								<div class="top-row">
-									<h3>Создание эфирного комплекса <br> телеканалов на технологии <br>
-										IPuncompressed SAM-Grass <br> Valley </h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">/ 21 телеканал / 2018</div>
-								</div>
-							</div>
-							<div class="client-slider__item main_background">
-								<div class="top-row">
-									<h3>Разработка проекта облачного <br> выпуска и доставки телеканала на
-										<br>
-										территории США </h3>
-								</div>
-								<div class="bottom-row">
-									<div class="client-description">
-										/ 2017–2018
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <section id="sectionConstructor" class="white-noise">
+        <div class="section-container">
+            <div class="column align-center">
+                <h2 class="section-title">
+                    <span class="dot-highlighted">МедиаХаб <span class="dot-green"></span></span>
+                    Конструктор
+                    технологических медианаук
+                </h2>
+                <ul class="styled-list">
+                    <li>Прием контента и оценка технического качества</li>
+                    <li>Предэфирная подготовка и транскодирование контента</li>
+                    <li>Перспективное и текущее планирование эфира</li>
+                    <li>Управление рекламным трафиком</li>
+                    <li>Архивирование эфирного контента</li>
+                    <li>Отчетность для рекламодателей и правообладателей</li>
+                    <li>Подготовка пакетов контента и расписаний для VOD</li>
+                    <li>Мультиязычная локализация контента</li>
+                </ul>
+            </div>
+            <div class="column object-container">
+                <div class="mobile-object triangle-hub"></div>
+                <div class="object-wrapper">
+                    <div class="left-part">
+                        <div class="triangle"></div>
+                        <div class="long-black-line"></div>
+                    </div>
+                    <div class="right-part">
+                        <div class="black-circle"></div>
+                        <div id="bottomRighthub">
+                            <div class="short-black-line"></div>
+                            <div class="green-square"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_trigger"></div>
+    </section>
 
-			<!--Ninth slide end-->
-			<!--Form slide-->
-			<section id="contactForm" class="dark-noise">
-				<div class="section-container">
-					<div class="row">
-						<h2 class="section-title">
-							<span class="dot-highlighted">Разработаем <br> решение под ваши <br> задачи</span>
-						</h2>
-					</div>
-					<div class="row">
-						<div class="half-block form-help-text">
-							<p>Возникли вопросы или хотите оценить стоимость проекта? Оставьте заявку и наш менеджер с вами свяжется.</p>
-						</div>
-						<div class="half-block form-wrap">
-							<form action="/contact" id="pageForm">
-								<div class="input-group">
-									<!--<label for="contactName">Ваше имя</label>-->
-									<input type="text" name="name" placeholder="Ваше имя">
-								</div>
+    <!--Third slide end-->
 
-								<div class="input-group">
-									<!--<label for="contactPhone">Телефон</label>-->
-									<input type="tel"
-										   name="tel" placeholder="Телефон">
-									<small class="error-message"></small>
-								</div>
+    <!--Fourth slide-->
 
-								<div class="input-group">
-									<textarea name="comment"> Сообщение </textarea>
-								</div>
-                                <div class="button-group">
-                                    <button class="submit-button" type="submit">Отправить</button>
-                                </div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--Form slide end-->
+    <section id="digitalArchive" class="white-noise">
+        <div class="section-container">
+            <div class="column object-container">
+                <div class="mobile-object shellHub"></div>
+                <div class="object-wrapper">
+                    <div class="top-line"></div>
+                    <div class="brick-row first">
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                    </div>
+                    <div class="line simple middle"></div>
+                    <div class="brick-row second">
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                        <div class="brick green"></div>
+                    </div>
+                    <div class="line simple bottom"></div>
+                </div>
+            </div>
+            <div class="column align-center">
+                <h2 class="section-title">
+                    <span class="dot-highlighted">Цифровой архив <span class="dot-green"></span></span>
+                    Smart архивирование и надежное хранение исходных медиа -
+                    материалов
+                </h2>
+                <div class="hover-mobile-block">
+                    <p>
+                        Интеграционный проект медиаархива номинирован на соискание премии Зворыкина
+                        Национальной ассоциации телевещателей
+                    </p>
+                </div>
+                <ul class="styled-list">
+                    <li>Координация приема и выдачи контента</li>
+                    <li>Оценка технического качества</li>
+                    <li>Емкость библиотеки 2,5 Петабайта</li>
+                    <li>Пакетирование и цифровая доставка контента</li>
+                </ul>
 
-	</div>
+                <div class="boast-block">
+                    <div class="hover__wrap">
+                        <p>
+                            Интеграционный проект медиаархива номинирован на соискание премии Зворыкина
+                            Национальной ассоциации телевещателей
+                        </p>
+                    </div>
+                    <div class="boast-block__circle"></div>
+                    <div class="boast-block__rock"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer">
-		<div class="section-container">
-			<div class="left-side">
-				<div class="logo">
-				</div>
-				<div class="contact-block">
-					<ul>
-						<li><a href="tel:84993222971"></a>+7 499 322 29 71</li>
-						<li><a href="mailto:hello@pikemedia.ru">hello@pikemedia.ru</a></li>
-						<li>115162, Москва, ул. Шухова, 14</li>
-					</ul>
-				</div>
-			</div>
-			<div class="right-side">
-				<div class="social-block">
-					<a href="http://red-is.ru/" target="_blank" class="icon vk"></a>
-					<a href="http://red-is.ru/" target="_blank" class="icon fb"></a>
-					<a href="http://red-is.ru/" target="_blank" class="icon insta"></a>
-					<a href="http://red-is.ru/" target="_blank" class="icon ok"></a>
-					<a href="http://red-is.ru/" target="_blank" class="icon twitter"></a>
-					<a href="http://red-is.ru/" target="_blank" class="icon switch"></a>
-					<a href="http://red-is.ru/" target="_blank" class="icon youtube"></a>
-				</div>
-				<div class="company-link">
-                    <a href="http://red-is.ru/" target="_blank"><span class="hover-highlight">Redis</span> —
-                        <span
+    <!--Fourth slide end-->
+
+    <!--Fifth slide-->
+
+    <section id="signalTransmission" class="white-noise">
+        <div class="section-container">
+            <div class="column align-center">
+                <h2 class="section-title">
+                    <span class="dot-highlighted">Создание и доставка сигнала
+                        <span class="dot-green"></span></span>
+                    Выпуск, наземная <br/>
+                    и спутниковая доставка сигнала телеканалов
+                </h2>
+                <ul class="styled-list">
+                    <li>Мониторинг 24х7х365 в эфирной аппаратной</li>
+                    <li>Эфирный комплекс в России и США</li>
+                    <li>Выпуск телеканалов, мониторинг и технический контроль 24х7</li>
+                </ul>
+            </div>
+
+            <div class="column object-container">
+                <div class="mobile-object ringsHub"></div>
+                <div class="object-wrapper">
+                    <div class="fourth-ring">
+                    </div>
+                    <div class="third-ring">
+                    </div>
+                    <div class="second-ring">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Fifth slide end-->
+
+    <!--Sixth slide-->
+
+    <section id="promoSection" class="white-noise">
+        <div class="section-container">
+            <div class="column object-container">
+                <div class="mobile-object circleBricks"></div>
+                <div class="object-wrapper">
+                    <div class="outer-ring" id="firstRing">
+                        <div class="outer-ring__brick bg-black"></div>
+                        <div class="outer-ring__brick bg-black"></div>
+                        <div class="outer-ring__brick bg-black"></div>
+                        <div class="outer-ring__brick bg-black"></div>
+                    </div>
+                    <div class="outer-ring" id="secondRing">
+                        <div class="outer-ring__brick bg-main">
+                            <div class="outer-ring__cover"></div>
+                        </div>
+                        <div class="outer-ring__brick bg-main">
+                            <div class="outer-ring__cover"></div>
+                        </div>
+                        <div class="outer-ring__brick bg-main">
+                            <div class="outer-ring__cover"></div>
+                        </div>
+                        <div class="outer-ring__brick bg-main">
+                            <div class="outer-ring__cover"></div>
+                        </div>
+                    </div>
+                    <div class="triangle-object">
+                        <div class="triangle-object__side"></div>
+                        <div class="triangle-object__side"></div>
+                        <div class="triangle-object__side"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column align-center">
+                <h2 class="section-title">
+                    <span class="dot-highlighted">Создание промо<span class="dot-green"></span></span>
+                    Разработка <br> фирменного стиля <br>
+                    и промокампаний <br> телеканалов
+                </h2>
+                <div class="hover-mobile-block">
+                    <p>
+                        Наши работы отмечены <br> номинациями и премиями <br> Медиабренд 2016/2017/2018
+                        <br>и ProdaxBDA 2018
+                    </p>
+                </div>
+                <ul class="styled-list">
+                    <li>Создание брендбуков телеканалов и отдельных <br> элементов оформления</li>
+                    <li>Производство монтажных и постановочных <br> промороликов</li>
+                    <li>Производство внеэфирных промоматериалов</li>
+                </ul>
+
+                <div class="boast-block">
+                    <div class="hover__wrap">
+                        <p>
+                            Наши работы отмечены <br> номинациями и премиями <br> Медиабренд 2016/2017/2018
+                            <br>и ProdaxBDA 2018
+                        </p>
+                    </div>
+                    <div class="boast-block__circle"></div>
+                    <div class="boast-block__rock"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Sixth slide end-->
+
+    <!--Seventh slide-->
+
+    <section id="PMLSection" class="white-noise">
+        <div class="section-container">
+            <div class="video-bg" id="presentationVid">
+                <video width="100%" loop="loop" muted="muted"
+                       poster="./dist/images/video_posters/banner-bg.jpg">
+                    <source src="./assets/video_backgrounds/Presentacia_2_hq.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="overlay-background"></div>
+            <div class="overlay-title">
+                <a href="http://red-is.ru/" target="_blank">
+                    <div class="overlay-title__container">
+                        <h2 class="section-title">
+                            <span class="dot-highlighted">Съемки<span class="dot-green"></span></span>
+                        </h2>
+
+                        <h2 class="section-title">
+                            <span class="dot-highlighted">Трансляции<span class="dot-green"></span></span>
+                        </h2>
+
+                        <h2 class="section-title">
+                            <span class="dot-highlighted">Монетизация<span class="dot-green"></span></span>
+                        </h2>
+                        <div class="presentation-logo">
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Seventh slide end-->
+
+    <!--Eighth slide-->
+
+    <section id="integrationSlide" class="white-noise">
+        <div class="section-container">
+            <div class="mobile-object single-triangle">
+                <ul class="custom-list">
+                    <li>Разработка технических <br> заданий, проектный <br> менеджмент и аудит
+                        <br> технологических решений
+                    </li>
+                    <li>Внедрение систем <br> менеджмента производства/<br>управления проектами</li>
+                    <li>Разработка технологических <br> циклов телевизионного <br>
+                        производства/производства <br> контента
+                    </li>
+                </ul>
+                <h2>
+                    Интеграция
+                </h2>
+            </div>
+            <div class="figure-wrapper">
+                <div class="triangle-right">
+                    <ul class="custom-list">
+                        <li>Разработка технических <br> заданий, проектный <br> менеджмент и аудит
+                            <br> технологических решений
+                        </li>
+                    </ul>
+                </div>
+                <div class="triangle-right">
+                    <ul class="custom-list">
+                        <li>Внедрение систем <br> менеджмента производства/<br>управления проектами</li>
+                    </ul>
+                </div>
+                <div class="triangle-right">
+                    <ul class="custom-list">
+                        <li>Разработка технологических <br> циклов телевизионного <br>
+                            производства/производства <br> контента
+                        </li>
+                    </ul>
+                </div>
+                <h2>
+                    Интеграция
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!--Eighth slide end-->
+
+    <!--Ninth slide-->
+
+    <section id="integrationExperienceSlide" class="dark-noise">
+        <div class="section-container">
+            <div class="video-bg">
+                <video width="100%" height="100%" loop="loop" muted="muted"
+                       poster="./dist/images/video_posters/Integration_bg.jpg">
+                    <source src="./assets/video_backgrounds/Presentacia_3_hq.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="overlay-background"></div>
+            <div class="row">
+                <h2 class="dotted-title">
+                    Наш опыт <br> интеграции
+                    <span class="dotted-title__dot"></span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="client-slider owl-carousel owl-theme" id="experienceSlider">
+                    <div class="client-slider__item main_background">
+                        <div class="top-row">
+                            <h3>Создание эфирной аппаратной <br> на 90 телеканалов</h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description text-white">
+                                / 2018
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item">
+                        <div class="top-row">
+                            <h3>Создание эфирного комплекса <br> телеканалов на технологии <br>
+                                IPuncompressed SAM-Grass <br> Valley </h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">/ 21 телеканал / 2018</div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item main_background">
+                        <div class="top-row">
+                            <h3>Разработка проекта облачного <br> выпуска и доставки телеканала на
+                                <br>
+                                территории США </h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description text-white">
+                                / 2017–2018
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item">
+                        <div class="top-row">
+                            <h3>Создание эфирного комплекса <br> телеканалов на технологии <br>
+                                IPuncompressed SAM-Grass <br> Valley </h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description">/ 21 телеканал / 2018</div>
+                        </div>
+                    </div>
+                    <div class="client-slider__item main_background">
+                        <div class="top-row">
+                            <h3>Разработка проекта облачного <br> выпуска и доставки телеканала на
+                                <br>
+                                территории США </h3>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="client-description text-white">
+                                / 2017–2018
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Ninth slide end-->
+    <!--Form slide-->
+    <section id="contactForm" class="dark-noise">
+        <div class="section-container">
+            <div class="row">
+                <h2 class="section-title">
+                    <span class="dot-highlighted">Разработаем решение под ваши задачи <span class="dot-green"></span></span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="half-block form-help-text">
+                    <p>Возникли вопросы или хотите оценить стоимость проекта? Оставьте заявку и наш менеджер с
+                        вами свяжется.</p>
+                </div>
+                <div class="half-block form-wrap">
+                    <form action="/contact" id="pageForm">
+                        <div class="input-group">
+                            <!--<label for="contactName">Ваше имя</label>-->
+                            <input type="text" name="name" placeholder="Ваше имя">
+                        </div>
+
+                        <div class="input-group">
+                            <!--<label for="contactPhone">Телефон</label>-->
+                            <input type="tel"
+                                   name="tel" placeholder="Телефон">
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea name="comment"> Сообщение </textarea>
+                        </div>
+                        <div class="button-group">
+                            <button class="submit-button" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Form slide end-->
+
+</div>
+
+<footer class="footer">
+    <div class="section-container">
+        <div class="left-side">
+            <div class="logo">
+            </div>
+            <div class="contact-block">
+                <ul>
+                    <li><a href="tel:84993222971"></a>+7 499 322 29 71</li>
+                    <li><a href="mailto:hello@pikemedia.ru">hello@pikemedia.ru</a></li>
+                    <li>115162, Москва, ул. Шухова, 14</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="social-block">
+                <a href="http://red-is.ru/" target="_blank" class="icon vk"></a>
+                <a href="http://red-is.ru/" target="_blank" class="icon fb"></a>
+                <a href="http://red-is.ru/" target="_blank" class="icon insta"></a>
+                <a href="http://red-is.ru/" target="_blank" class="icon ok"></a>
+                <a href="http://red-is.ru/" target="_blank" class="icon twitter"></a>
+                <a href="http://red-is.ru/" target="_blank" class="icon switch"></a>
+                <a href="http://red-is.ru/" target="_blank" class="icon youtube"></a>
+            </div>
+            <div class="company-link">
+                <a href="http://red-is.ru/" target="_blank"><span class="hover-highlight">Redis</span> —
+                    <span
                             class="dimmed-text">создание
 						сайта</span></a>
-				</div>
-			</div>
-		</div>
-	</footer>
+            </div>
+        </div>
+    </div>
+</footer>
 
-	</body>
-	<script type="text/javascript" src="dist/main.js"></script>
+</body>
+<script type="text/javascript" src="dist/main.js"></script>
 </html>

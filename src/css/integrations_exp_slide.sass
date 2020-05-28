@@ -1,0 +1,66 @@
+#integrationExperienceSlide
+
+  .video-bg
+    +mobile
+      height: 592px
+      video
+        transform: scale(3.9) translateX(0)
+
+  .overlay-background
+    background: rgba(0,0,0,.7)
+    +mobile
+      height: 100vh
+
+  .section-container
+    justify-content: center
+    padding: 0
+
+  .dotted-title
+    +mobile
+      position: relative
+      display: flex
+      margin-bottom: 105px
+      margin-top: 0
+      padding-left: 27px
+
+  //.top-row
+  //  h3
+  //    font-size: 24px!important
+  //    font-weight: normal!important
+  //    font-stretch: normal!important
+  //    font-style: normal!important
+  //    line-height: 1.46!important
+  //    letter-spacing: normal!important
+
+  .client-slider
+    +mobile
+      display: block
+      padding-left: 27px
+      &__item
+        min-height: 270px
+        max-height: 270px
+        padding: 35px 28px 25px 34px
+        h3
+          font-size: 14px
+          line-height: 1.57
+          font-weight: 300
+          letter-spacing: normal
+
+        .bottom-row
+          justify-content: flex-end
+
+  .owl-item
+    +mobile
+      max-height: 270px
+
+  .owl-nav
+    +mobile
+      top: -60px
+      left: 30px
+      right: unset
+      button
+        width: 22px
+        height: 22px
+        border-top: 6px solid $main-color
+        border-left: 6px solid $main-color
+

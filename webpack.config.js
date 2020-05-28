@@ -3,7 +3,6 @@ const webpack = require('webpack');
 
 module.exports = {
   plugins: [
-    require('autoprefixer'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -31,7 +30,11 @@ module.exports = {
           'extract-loader',
           'css-loader',
           {
-            loader: 'resolve-url-loader'
+            loader: 'resolve-url-loader',
+            options: {
+            	sourceMap: true,
+            	sourceMapContents: false
+            }
           },
           {
             loader: 'postcss-loader',

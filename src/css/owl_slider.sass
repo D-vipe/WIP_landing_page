@@ -1,0 +1,119 @@
+.owl-carousel
+  .owl-stage
+    padding-left: 0!important
+
+.client-slider
+  padding-left: 305px
+  position: relative
+  +mobile
+    padding-left: 0
+
+  &__item
+    background-color: $plain-white
+    max-width: 500px
+    min-height: 397px
+    max-height: 397px
+    overflow: hidden
+    padding: 36px 34px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +mobile
+      flex-direction: column
+      justify-content: flex-start
+
+    &.main_background
+      background-color: $main-color
+
+    .top-row
+      h3
+        font-size: 40px
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.15
+        letter-spacing: -0.85px
+        color: $plain-black
+        +mobile
+          font-size: 25px
+          margin-bottom: 15px
+
+    .bottom-row
+      display: flex
+      flex-direction: row
+      flex-flow: nowrap
+      justify-content: space-between
+      align-items: flex-end
+      +mobile
+        flex-direction: column
+        height: 100%
+        align-items: flex-start
+        justify-content: space-between
+        flex-grow: 1
+
+
+      .client-description
+        font-size: 16px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.5
+        letter-spacing: normal
+        &.text-white
+          color: #FFFFFF
+
+        +mobile
+          font-size: 14px
+
+      .client-logo
+        flex-shrink: 0
+
+        &.ct-vgtrk
+          margin-left: -40px
+          +mobile
+            margin-left: -110px
+
+        &.first-st
+          margin-right: -110px
+
+        &.strim
+          +mobile
+            margin-left: -20px
+
+#sectionClients,
+#integrationExperienceSlide
+  .owl-nav
+    position: absolute
+    top: -120px
+    right: 20%
+    margin-top: 0
+    z-index: 5
+
+    button
+      display: inline-block
+      width: 30px
+      height: 30px
+      background: transparent
+      //text-indent: -9999px
+      border-top: 8px solid $main-color
+      border-left: 8px solid $main-color
+      transition: all 250ms ease-in-out
+      text-decoration: none
+      color: transparent
+      &:hover
+        border-top: 8px solid $main-hover
+        border-left: 8px solid $main-hover
+      &:before
+        display: block
+        height: 200%
+        width: 200%
+        margin-left: -50%
+        margin-top: -50%
+        content: ""
+        transform: rotate(45deg)
+      &.owl-prev
+        transform: rotate(-45deg)
+        left: 0
+      &.owl-next
+        transform: rotate(135deg)
+        right: 0

@@ -3,14 +3,14 @@
 @import url(./css/owl.theme.default.min.css);
 @font-face {
   font-family: "GothamPro";
-  src: url("./fonts/GothamPro.ttf") format("ttf");
-  src: url("./fonts/GothaPro.otf") format("otf");
+  src: url("../assets/fonts/GothamPro.ttf") format("ttf");
+  src: url("../assets/fonts/GothaPro.otf") format("otf");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "GothamProBold";
-  src: url("./fonts/GothamProBold.ttf") format("ttf");
-  src: url("./fonts/GothaProBold.otf") format("otf");
+  src: url("../assets/fonts/GothamProBold.ttf") format("ttf");
+  src: url("../assets/fonts/GothaProBold.otf") format("otf");
   font-weight: bold;
   font-style: normal; }
 /* Eric Meyer's CSS Reset */

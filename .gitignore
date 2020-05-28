@@ -6,7 +6,8 @@
 /test/ChangesAndRemovals
 /benchmark/js
 /benchmark/fixtures
-/examples/**/dist
+/examples/**
+/dist
 /coverage
 /src/css/*.css.map
 .DS_Store

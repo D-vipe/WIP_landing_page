@@ -6,14 +6,17 @@
 .section-container
   display: flex
   width: 100%
-  height: 100%
+  min-height: 100%
+  height: auto
   padding: 52px 70px
   position: relative
   flex-flow: column
   justify-content: space-between
   overflow: hidden
   +mobile
-    padding: 20px 27px
+    padding: 20px 24px
+    min-height: 100%
+    height: auto
 
 .overflow-wrap
   overflow: hidden
@@ -27,11 +30,10 @@
   z-index: 2
   background-color: $plain-black
   opacity: 1
-  animation: curtainDim .8s ease-out 1s forwards
+  animation: curtainDim .8s ease-out 1s forwards normal
   .curtain__container
     height: 100%
     background-color: $main-color
-    margin: 0 67px
     animation: curtainScroll .8s ease-out .3s forwards
     +mobile
       margin: 0
@@ -46,7 +48,7 @@
     height: 100%
     opacity: .15
     z-index: -1
-    background: url('../img/dark-noise-constructor.gif')
+    background: url('../general/dark-noise-constructor.gif')
 
 .dark-noise
   &:before
@@ -58,7 +60,7 @@
     height: 100%
     opacity: .95
     z-index: -1
-    background: url('../img/dark-noise-clients.gif')
+    background: url('../general/dark-noise-clients.gif')
     transition: all .4s ease-in
   &.lighten
     &:before
@@ -79,107 +81,8 @@
   +mobile
     width: 100%
     padding: 0
-    margin: 60px 0 20px 0
+    margin: 52px 0 22px 0
     align-items: flex-start
-
-.fixed-navbar
-  position: fixed
-  top: 52px
-  left: 0
-  width: 100%
-  display: flex
-  justify-content: space-between
-  padding: 0 70px
-  +mobile
-    padding: 0 20px
-    top: 44px
-  .header-info
-    position: relative
-    display: flex
-    z-index: 2
-
-    .header-info__logo
-      display: flex
-      align-items: flex-start
-      justify-content: center
-      margin-right: 40px
-      #slidingPart
-        display: flex
-        flex-wrap: nowrap
-        transform: translateX(-140px)
-        +mobile
-          transform: translateX(0)
-      .logo-back
-        background: url(../img/fill-1@3x.png) center no-repeat
-        background-size: contain
-        width: 36px
-        height: 47px
-        +mobile
-          width: 28px
-          height: 35px
-          background-size: cover
-      .logo-front
-        background: url(../img/fill-2@3x.png) center no-repeat
-        background-size: contain
-        width: 24px
-        height: 47px
-        +mobile
-          height: 37px
-
-      .logo-middle
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        margin: 0 10px
-        .title
-          background: url(../img/pike-light@3x.png) center no-repeat
-          background-size: cover
-          width: 122px
-          height: 41px
-          margin-bottom: 10px
-          +mobile
-            background-size: cover
-            width: 92px
-            height: 30px
-          &.white-logo
-            background: url(../img/pike-black.png) center no-repeat
-            background-size: cover
-            +mobile
-              background-size: contain
-
-        .subtitle
-          background: url(../img/medialab@3x.png) center no-repeat
-          background-size: cover
-          width: 124px
-          height: 10px
-          transform: translateY(-10px)
-          +mobile
-            width: 92px
-            transform: translateY(0)
-            background-size: contain
-          &.white-logo
-            background: url(../img/medialab-black.png) center no-repeat
-            background-size: cover
-            +mobile
-              background-size: contain
-
-    .header-info__text
-      height: 128px
-      max-width: 504px
-      font-family: 'GothamPro', sans-serif
-      font-size: 24px
-      font-weight: normal
-      font-stretch: normal
-      font-style: normal
-      line-height: 1.33
-      letter-spacing: normal
-      color: $plain-white
-      margin-left: -135px
-      +mobile
-        display: none
-    .button-block
-      position: relative
-      z-index: 5
 
 .button
   padding: 10px 20px
@@ -199,7 +102,7 @@
       display: none
       +mobile
         display: block
-        background: url('../img/telephon@2x.png') center no-repeat
+        background: url('../general/telephon@2x.png') center no-repeat
         background-size: contain
         border: none
         width: 29px
@@ -212,8 +115,8 @@
   height: 100vh
   width: 100vw
   opacity: .95
-  //background-color: $plain-black
-  background: url('../img/dark-noise.gif')
+  background-color: $plain-black
+  background: url('../general/dark-noise.gif')
   video
     height: 100vh
     width: 100vw
@@ -233,57 +136,41 @@
     justify-content: space-between
     align-items: flex-start
 
-  .logo
-    display: block
-    width: 100%
-    position: relative
 
-    .logo__top
-      height: 184px
-      background: url('../img/pike.svg') left no-repeat
-      +mobile
-        height: 51px
-        background-size: contain
-
-    .logo__bottom
-      height: 184px
-      background: url('../img/medialab.svg') left no-repeat
-      .part-top
-        display: none
-        +mobile
-          display: block
-          background: url('../img/media.svg') left no-repeat
-          height: 51px
-          background-size: contain
-          margin-top: 10px
-      .part-bottom
-        display: none
-        +mobile
-          display: block
-          background: url('../img/lab.svg') right no-repeat
-          height: 51px
-          background-size: contain
-          margin-top: 10px
-      +mobile
-        background: none
 
 .section-title
   font-size: 61px
+  font-family: $gothamPro-Bold
   color: $main-color
   line-height: 1.2
   letter-spacing: -2
   font-weight: 600
+  max-width: 826px
 
   .dot-highlighted
     position: relative
+    display: inline
+    //align-items: flex-end
     color: $plain-black
     margin-right: 28px
+    line-height: 46px
+    +mobile
+      margin-right: 0
+
+    .dot-green
+      display: inline-block
+      width: 8px
+      height: 8px
+      background-color: #01da00
+      margin-left: 2px
+      margin-bottom: -1px
+
     &:after
-      content: ''
+      //content: ''
       display: block
-      position: absolute
-      bottom: 9px
-      right: -20px
+      //position: absolute
+      margin-bottom: 12px
+      margin-left: 2px
       width: 12px
       height: 12px
       background-color: #01da00
@@ -294,7 +181,6 @@
         height: 8px
 
 .styled-list
-  list-style: square
   font-size: 16px
   font-weight: normal
   font-stretch: normal
@@ -303,11 +189,23 @@
   letter-spacing: normal
   margin-left: 20px
   +mobile
-    padding: 0 20px
-    margin: 0 20px
+    padding: 0
+    margin: 0
 
   li
     margin-bottom: 10px
+    position: relative
+    padding-left: 31px
+    &:before
+      content: ''
+      position: absolute
+      display: inline-block
+      width: 7px
+      height: 7px
+      background-color: #000000
+      top: 5px
+      left: 0
+
     +mobile
       font-size: 14px
       line-height: 1.57
@@ -321,7 +219,7 @@ section
       display: flex
       flex-direction: column
       align-items: flex-start
-      margin-bottom: 30px!important
+      margin-bottom: 30px
 
   .boast-block
     display: flex
@@ -336,18 +234,20 @@ section
     +mobile
       width: 76px
       height: 76px
-      top: 33%
-    .boast-block__circle
+      top: 39%
+      right: 30px
+
+    &__circle
       position: relative
       width: 100%
       height: 100%
-      background: url('../img/feature-text.png') center no-repeat
+      background: url('../general/feature-text.png') center no-repeat
       background-size: cover
-    .boast-block__rock
+    &__rock
       position: absolute
       width: 55px
       height: 90px
-      background: url('../img/rock-icon.png') center no-repeat
+      background: url('../general/rock-icon.png') center no-repeat
       background-size: cover
       +mobile
         width: 24px
@@ -383,6 +283,7 @@ section
 
 .dotted-title
   font-size: 80px
+  font-family: $gothamPro-Bold
   font-weight: bold
   font-stretch: normal
   font-style: normal
@@ -393,13 +294,13 @@ section
   margin: 71px 0
   display: flex
   align-items: flex-end
+  position: relative
   +mobile
-    display: none
     font-size: 40px
     padding-left: 0
     margin-bottom: 35px
 
-  .dotted-title__dot
+  &__dot
     width: 16px
     height: 16px
     display: block
@@ -407,131 +308,16 @@ section
     margin-bottom: 10px
     margin-left: 7px
     +mobile
-      margin-bottom: 5px
+      margin-bottom: 8px
       width: 8px
       height: 8px
 
-#integrationExperienceSlide
-  .client-slider
-    +mobile
-      display: block!important
-      padding-left: 27px!important
-  .owl-nav
-    +mobile
-      top: -60px!important
-      left: 30px
-      right: unset!important
-      button
-        width: 22px!important
-        height: 22px!important
-        border-top: 6px solid $main-color!important
-        border-left: 6px solid $main-color!important
-
-#sectionClients, #integrationExperienceSlide
-  .owl-carousel
-    .owl-stage
-      padding-left: 0!important
-  .client-slider
-    padding-left: 305px
-    position: relative
-    +mobile
-      display: none
-
-    .client-slider__item
-      background-color: $plain-white
-      max-width: 500px
-      min-height: 397px
-      max-height: 397px
-      overflow: hidden
-      padding: 36px 34px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      &.main_background
-        background-color: $main-color
-        .client-description
-          color: $plain-white
-      .top-row
-        h3
-          font-size: 40px
-          font-weight: bold
-          font-stretch: normal
-          font-style: normal
-          line-height: 1.15
-          letter-spacing: -0.85px
-          color: $plain-black
-      .bottom-row
-        display: flex
-        flex-direction: row
-        flex-flow: nowrap
-        justify-content: space-between
-        align-items: flex-end
-
-        .client-description
-          font-size: 16px
-          font-weight: normal
-          font-stretch: normal
-          font-style: normal
-          line-height: 1.5
-          letter-spacing: normal
-
-        .client-logo
-          .zvezda
-            width: 200px
-            height: 63px
-          .zero-media
-            width: 95px
-            height: 103px
-          .ct-vgtrk
-            width: 200px
-            height: 121px
-            margin-left: -40px
-          .first-st
-            width: 100%
-            height: 111px
-          .strim
-            width: 179px
-            height: 50px
-  .owl-nav
-    position: absolute
-    top: -120px
-    right: 20%
-    margin-top: 0
-    opacity: 0
-
-    button
-      display: inline-block
-      //position: absolute
-      width: 30px
-      height: 30px
-      background: transparent
-      text-indent: -9999px
-      border-top: 8px solid $main-color
-      border-left: 8px solid $main-color
-      transition: all 250ms ease-in-out
-      text-decoration: none
-      color: transparent
-      &:hover
-        border-top: 8px solid $main-hover
-        border-left: 8px solid $main-hover
-      &:before
-        display: block
-        height: 200%
-        width: 200%
-        margin-left: -50%
-        margin-top: -50%
-        content: ""
-        transform: rotate(45deg)
-      &.owl-prev
-        transform: rotate(-45deg)
-        left: 0
-      &.owl-next
-        transform: rotate(135deg)
-        right: 0
 .overlay-background
   width: 100%
   position: absolute
   height: 595px
+  top: 0
+  left: 0
   background: rgba(0,0,0,.5)
 
 .dimmed-text
@@ -542,25 +328,25 @@ section
   +mobile
     display: block
     &.triangle-hub
-      background: url('../img/triangleHub.png') center no-repeat
+      background: url('../general/figure_objects/triangleHub.png') center no-repeat
       -webkit-background-size: cover
       background-size: cover
       width: 120px
       height: 120px
     &.shellHub
-      background: url('../img/shellHub.png') center no-repeat
+      background: url('../general/figure_objects/shellHub.png') center no-repeat
       -webkit-background-size: cover
       background-size: cover
       width: 82px
       height: 101px
     &.ringsHub
-      background: url('../img/ringsHub.png') center no-repeat
+      background: url('../general/figure_objects/ringsHub.png') center no-repeat
       -webkit-background-size: cover
       background-size: cover
       width: 120px
       height: 120px
     &.circleBricks
-      background: url('../img/circleBricks.png') center no-repeat
+      background: url('../general/circleBricks.png') center no-repeat
       -webkit-background-size: cover
       background-size: cover
       width: 120px

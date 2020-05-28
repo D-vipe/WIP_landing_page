@@ -29,6 +29,7 @@
   "dependencies": {
     "gsap": "^3.2.6",
     "jquery": "^3.5.0",
+    "owl.carousel": "^2.3.4",
     "scrollmagic": "^2.0.7",
     "scrollmagic-plugin-gsap": "^1.0.4"
   },

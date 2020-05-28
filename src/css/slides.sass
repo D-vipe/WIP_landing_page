@@ -1,6 +1,8 @@
 #sectionClients
   position: relative
   z-index: 1
+  +mobile
+    padding-bottom: 57px
   .section-container
     justify-content: initial
     padding-right: 0
@@ -12,12 +14,15 @@
     padding-left: 305px
     +mobile
       padding-left: 0
-      padding-top: 120px
+      padding-top: 54px
+      flex-direction: column
 
-    .advantages__item
+    &__item
       display: flex
       flex-direction: column
       margin-right: 120px
+      +mobile
+        margin-right: 0
 
       .advantages__header
         font-size: 80px
@@ -45,98 +50,21 @@
           line-height: 1.57
           margin-bottom: 47px
 
-#sectionClientsMobile
-  display: none
-  +mobile
-    display: flex
-    flex-direction: column
-    justify-content: center
+  .client-slider
+    &__item
+      +mobile
+        max-height: 380px
 
-    .dotted-title
-      padding-left: 27px
-      display: flex
-
-    .owl-nav
-      position: absolute
+  .owl-nav
+    +mobile
       top: -70px
+      left: unset
       right: 10%
-      margin-top: 0
-      opacity: 0
-
       button
-        display: inline-block
-        //position: absolute
         width: 22px
         height: 22px
-        background: transparent
-        text-indent: -9999px
         border-top: 6px solid $main-color
         border-left: 6px solid $main-color
-        transition: all 250ms ease-in-out
-        text-decoration: none
-        color: transparent
-        &:hover
-          border-top: 6px solid $main-hover
-          border-left: 6px solid $main-hover
-        &:before
-          display: block
-          height: 200%
-          width: 200%
-          margin-left: -50%
-          margin-top: -50%
-          content: ""
-          transform: rotate(45deg)
-        &.owl-prev
-          transform: rotate(-45deg)
-          left: 0
-        &.owl-next
-          transform: rotate(135deg)
-          right: 0
-
-    .owl-carousel
-      .owl-stage
-        padding-left: 0!important
-    .client-slider
-      padding-left: 27px
-      position: relative
-
-      .client-slider__item
-        background-color: $plain-white
-        max-width: 500px
-        min-height: 397px
-        max-height: 397px
-        overflow: hidden
-        padding: 36px 34px
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        &.main_background
-          background-color: $main-color
-        .top-row
-          h3
-            font-size: 25px
-            font-weight: bold
-            font-stretch: normal
-            font-style: normal
-            line-height: 1.15
-            color: $plain-black
-            margin-bottom: 15px
-        .bottom-row
-          display: flex
-          flex-direction: column
-          flex-grow: 1
-          justify-content: space-between
-          align-items: flex-start
-          .client-description
-            font-size: 14px
-            line-height: 1.57
-          .client-logo
-            .ct-vgtrk
-              transform: translateX(-110px)
-            .first-st
-              transform: translateX(-110px)
-            .strim
-              transform: translateX(-10px)
 
 #sectionConstructor
   position: relative
@@ -226,12 +154,25 @@
       flex-direction: column
       justify-content: flex-start
       padding: 0
+
+    .boast-block
+      +mobile
+        top: 36%
+
   .section-title
     margin-bottom: 60px
     +mobile
-      padding: 0 20px
+      padding-left: 24px
+      padding-right: 24px
       .dot-highlighted
-        margin-bottom: -30px
+        &:after
+          bottom: 14px
+          right: -10px
+          position: absolute
+          width: 6px
+          height: 6px
+          margin-bottom: 0
+
 
   .column
     position: relative
@@ -240,9 +181,10 @@
     margin-right: 120px
     overflow: initial
     +mobile
-      margin-top: 120px
       margin-right: 0
-      padding: 0 20px
+      padding-left: 24px
+      padding-right: 24px
+
   .object-wrapper
     overflow: initial
     +mobile
@@ -273,505 +215,6 @@
       background-color: $plain-black
       margin-bottom: 30px
 
-    .styled-list
-      +mobile
-        padding: 0 20px
-
-#signalTransmission
-  .section-container
-    flex-flow: row
-    justify-content: center
-    align-items: center
+  .styled-list
     +mobile
-      flex-direction: column-reverse
-      justify-content: flex-end
-
-    .section-title
-      margin-bottom: 60px
-      .dot-highlighted
-        &:after
-          +mobile
-            bottom: 5px
-            right: unset
-            left: 105px
-            width: 8px
-            height: 8px
-
-    .styled-list
-      +mobile
-        margin-left: 0
-
-    .object-container
-      overflow: initial
-      +mobile
-        margin-top: 100px
-    .object-wrapper
-      display: flex
-      align-items: flex-end
-      margin-top: 300px
-      transform: translateX(-50px)
-      position: relative
-      +mobile
-        display: none
-      .fourth-ring
-        display: flex
-        align-items: center
-        justify-content: center
-        position: relative
-      .circle
-        width: 30px
-        height: 30px
-        background-color: $plain-black
-        border-radius: 50%
-      .second-ring
-        width: 130px
-        height: 130px
-        display: flex
-        align-items: center
-        justify-content: center
-        border-radius: 50%
-        border-top: 15px solid $plain-black
-        border-right: 15px solid transparent
-        border-bottom: 15px solid transparent
-        border-left: 15px solid transparent
-        position: absolute
-        transform: rotate(50deg)
-        top: 90px
-        left: 90px
-      .third-ring
-        width: 230px
-        height: 230px
-        display: flex
-        align-items: center
-        justify-content: center
-        border-radius: 50%
-        border: 15px solid #01da00
-        border-top: 15px solid #000
-        position: absolute
-        transform: rotate(50deg)
-        top: 40px
-        left: 40px
-      .fourth-ring
-        width: 310px
-        height: 310px
-        display: flex
-        align-items: center
-        justify-content: center
-        border-radius: 50%
-        border-top: 15px solid $plain-black
-        border-right: 15px solid transparent
-        border-bottom: 15px solid transparent
-        border-left: 15px solid transparent
-        transform: rotate(50deg)
-
-#promoSection
-  .section-container
-    flex-direction: row
-    justify-content: center
-    +mobile
-      flex-direction: column
-      justify-content: flex-start
-      padding: 0
-    .column
-      position: relative
-
-    .section-title
-      +mobile
-        padding: 0 20px
-      .dot-highlighted
-        +mobile
-          margin-bottom: -30px
-
-    .boast-block
-      right: -70px
-      +mobile
-        right: 40px
-    .object-container
-      margin-right: 100px
-      +mobile
-        margin-right: 0
-        margin-top: 100px
-        padding: 0 20px
-    .object-wrapper
-      min-width: 331px
-      height: 100%
-      position: relative
-      margin-top: 210px
-      +mobile
-        display: none
-      .triangle-object
-        position: absolute
-        left: 135px
-        top: 110px
-        width: 100px
-        height: 110px
-        .triangle-object__side
-          height: 110px
-          border: 15px solid transparent
-          position: absolute
-          &:nth-child(1)
-            border-right: 15px solid $plain-black
-            transform: rotate(60deg)
-            top: 14px
-            left: 26px
-          &:nth-child(2)
-            border-left: 15px solid $plain-black
-          &:nth-child(3)
-            border-right: 15px solid $plain-black
-            transform: rotate(-60deg)
-            top: -16px
-            left: 26px
-
-      .outer-ring
-        width: 331px
-        height: 332px
-        position: absolute
-        overflow: hidden
-        &#secondRing
-          transform: rotate(45deg)
-          .outer-ring__cover
-            width: 20px
-            height: 60px
-            background-color: $plain-white
-
-            &:before
-              content: ''
-              display: block
-              width: 20px
-              height: 60px
-              background: url('../img/dark-noise-cover.gif') center no-repeat
-              opacity: .15
-
-      .outer-ring__brick
-        width: 20px
-        height: 60px
-        position: absolute
-        &:nth-child(1)
-          top: 0
-          left: 50%
-          margin-left: -10px
-          .outer-ring__cover
-            transform: translateY(60px)
-        &:nth-child(2)
-          top: 40%
-          left: 20px
-          transform: rotate(90deg)
-          .outer-ring__cover
-            transform: translateY(-60px)
-        &:nth-child(3)
-          top: 40%
-          right: 20px
-          transform: rotate(90deg)
-          .outer-ring__cover
-            transform: translateY(60px)
-        &:nth-child(4)
-          bottom: 0
-          left: 50%
-          margin-left: -10px
-          .outer-ring__cover
-            transform: translateY(-60px)
-
-#PMLSection
-  .section-container
-    flex-direction: row
-    align-items: center
-    padding: 0
-
-    a
-      position: relative
-      z-index: 10
-      text-decoration: none
-      &:focus
-        outline: none
-
-  #presentationVid
-    width: 100%
-    height: 595px
-    overflow: hidden
-    position: relative
-  .overlay-title
-    position: absolute
-    display: flex
-    flex-direction: column
-    justify-content: center
-    width: 100%
-    height: 100%
-    .overlay-title__container
-      max-width: 990px
-      margin: 0 auto
-      position: relative
-      +mobile
-        margin-left: 20px
-        margin-bottom: 160px
-        display: flex
-        flex-direction: column
-        justify-content: flex-end
-        height: 100%
-    .presentation-logo
-      background: url('../img/pml-logo.png') center no-repeat
-      background-size: contain
-      width: 151px
-      height: 151px
-      position: absolute
-      top: -120px
-      right: 80px
-      +mobile
-        width: 100px
-        height: 101px
-        top: 108px
-        left: 0
-  .section-title
-    font-size: 80px
-    max-width: 990px
-    margin-bottom: 24px
-    +mobile
-      font-size: 40px
-      margin-bottom: 5px!important
-    .dot-highlighted
-      color: $plain-white
-
-    &:nth-child(2)
-      margin-left: 200px
-      +mobile
-        margin-left: 0
-    &:nth-child(3)
-      margin-left: 400px
-      +mobile
-        margin-left: 0
-  .video-bg
-    video
-      +mobile
-        transform: scale(4) translateX(0)
-
-#integrationSlide
-  .section-container
-    justify-content: center
-  .single-triangle
-    display: none
-    position: relative
-    align-items: center
-    height: 500px
-    width: 320px
-    border-left: 320px solid #01da00
-    border-top: 320px solid transparent
-    border-bottom: 320px solid transparent
-    margin-left: -27px
-    +mobile
-      display: flex
-    h2
-      font-size: 40px
-      font-weight: bold
-      font-stretch: normal
-      font-style: normal
-      line-height: 1
-      letter-spacing: -1.7px
-      position: absolute
-      left: -280px
-      top: -240px
-    .custom-list
-      white-space: nowrap
-      position: absolute
-      z-index: 2
-      top: -100px
-      left: -320px
-      width: 280px
-      font-size: 16px
-      list-style: none
-      padding-left: 40px
-      li
-        font-size: 16px
-        font-weight: 300
-        line-height: 1.57
-        letter-spacing: normal
-        padding-left: 30px
-        position: relative
-        margin-bottom: 40px
-        &:before
-          content: ''
-          display: block
-          position: absolute
-          width: 8px
-          height: 8px
-          background-color: $plain-black
-          left: 0
-          top: 3px
-
-  .figure-wrapper
-    display: flex
-    justify-content: center
-    padding-left: 100px
-    position: relative
-    +mobile
-      display: none
-    h2
-      font-size: 80px
-      font-weight: bold
-      font-stretch: normal
-      font-style: normal
-      line-height: 1
-      letter-spacing: -1.7px
-      position: absolute
-      left: 280px
-      top: 80px
-    .triangle-right
-      width: 334px
-      height: 614px
-      border-left: 334px solid #01da00
-      border-top: 334px solid transparent
-      border-bottom: 334px solid transparent
-      position: relative
-      .custom-list
-        white-space: nowrap
-        position: absolute
-        z-index: 2
-        top: 50px
-        right: 20px
-        width: 222px
-        font-size: 16px
-        list-style: none
-        padding-left: 40px
-        li
-          font-size: 16px
-          font-weight: normal
-          font-stretch: normal
-          font-style: normal
-          line-height: 1.5
-          letter-spacing: normal
-        &:before
-          content: ''
-          display: block
-          position: absolute
-          width: 14px
-          height: 14px
-          background-color: $plain-black
-          left: 0
-          top: 3px
-
-#integrationExperienceSlide
-  .section-container
-    justify-content: center
-    padding: 0
-  .overlay-background
-    height: 100%
-
-  .dotted-title
-    +mobile
-      position: relative
-      display: flex
-      margin-bottom: 105px
-      padding-left: 27px
-
-  .top-row
-    h3
-      font-size: 24px!important
-      font-weight: normal!important
-      font-stretch: normal!important
-      font-style: normal!important
-      line-height: 1.46!important
-      letter-spacing: normal!important
-
-#contactForm
-  .section-container
-    justify-content: flex-start
-    max-width: 1040px
-    padding: 0
-    margin: 0 auto
-    +mobile
-      padding: 0 27px
-  .section-title
-    margin-top: 181px
-    +mobile
-      width: 100%
-    .dot-highlighted
-      font-size: 80px
-      color: $plain-white
-      +mobile
-        font-size: 28px
-        &:after
-          right: unset
-          left: 95px
-  .row
-    display: flex
-    +mobile
-      flex-direction: column
-  .half-block
-    max-width: 50%
-    +mobile
-      max-width: 100%
-      margin-bottom: 25px
-    &.form-help-text
-      margin-right: 144px
-      p
-        width: 361px
-        height: 72px
-        font-size: 16px
-        font-weight: normal
-        font-stretch: normal
-        font-style: normal
-        line-height: 1.5
-        letter-spacing: normal
-        color: $main-color
-    &.form-wrap
-      width: 100%
-
-  .form-wrap
-
-    .input-group
-      display: flex
-      flex-direction: column
-      margin-bottom: 46px
-      position: relative
-
-      .error-message
-        display: none
-        font-size: 14px
-        position: absolute
-        color: $plain-red
-        bottom: -25px
-        left: 0
-
-      input, textarea
-        border: none
-        background: transparent
-        border-bottom: 2px solid $main-color
-        font-size: 24px
-        color: $plain-white
-        padding-bottom: 20px
-        &:focus
-          outline: none
-          &::placeholder
-            opacity: 0
-        &::placeholder
-          font-size: 16px
-          line-height: 1.5
-          color: $plain-white
-          transition: all .3s
-        &.error
-          border-bottom: 2px solid $plain-red
-      textarea
-        font-size: 16px
-    .button-group
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 169px
-      height: 50px
-      background-color: $main-color
-      &:hover
-        background-color: $main-hover
-      +mobile
-        width: 100%
-
-      button
-        width: 100%
-        font-size: 12px
-        font-weight: 500
-        font-stretch: normal
-        font-style: normal
-        line-height: normal
-        letter-spacing: 1.01px
-        text-align: center
-        color: $plain-black
-        +mobile
-          text-transform: uppercase
-
+      padding: 0 24px

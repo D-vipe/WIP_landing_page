@@ -1,0 +1,123 @@
+#promoSection
+  +mobile
+    padding-bottom: 111px
+
+  .section-container
+    flex-direction: row
+    justify-content: center
+    +mobile
+      flex-direction: column
+      justify-content: flex-start
+      padding: 20px 0
+
+    .column
+      position: relative
+
+    .section-title
+      +mobile
+        padding-left: 24px
+        padding-right: 24px
+      .dot-highlighted
+        +mobile
+          &:after
+            width: 5px
+            height: 5px
+
+    .boast-block
+      right: -70px
+      +mobile
+        right: 35px
+        top: 29%
+
+    .object-container
+      margin-right: 100px
+      +mobile
+        margin-right: 0
+        padding-left: 24px
+        padding-right: 24px
+
+    .object-wrapper
+      min-width: 331px
+      height: 100%
+      position: relative
+      margin-top: 210px
+      +mobile
+        display: none
+
+      .triangle-object
+        position: absolute
+        left: 135px
+        top: 110px
+        width: 100px
+        height: 110px
+
+        .triangle-object__side
+          height: 110px
+          border: 15px solid transparent
+          position: absolute
+          &:nth-child(1)
+            border-right: 15px solid $plain-black
+            transform: rotate(60deg)
+            top: 14px
+            left: 26px
+          &:nth-child(2)
+            border-left: 15px solid $plain-black
+          &:nth-child(3)
+            border-right: 15px solid $plain-black
+            transform: rotate(-60deg)
+            top: -16px
+            left: 26px
+
+      .outer-ring
+        width: 331px
+        height: 332px
+        position: absolute
+        overflow: hidden
+        &#secondRing
+          transform: rotate(45deg)
+          .outer-ring__cover
+            width: 20px
+            height: 60px
+            background-color: $plain-white
+
+            &:before
+              content: ''
+              display: block
+              width: 20px
+              height: 60px
+              background: url('../general/dark-noise-cover.gif') center no-repeat
+              opacity: .15
+
+      .outer-ring__brick
+        width: 20px
+        height: 60px
+        position: absolute
+        &:nth-child(1)
+          top: 0
+          left: 50%
+          margin-left: -10px
+          .outer-ring__cover
+            transform: translateY(60px)
+        &:nth-child(2)
+          top: 40%
+          left: 20px
+          transform: rotate(90deg)
+          .outer-ring__cover
+            transform: translateY(-60px)
+        &:nth-child(3)
+          top: 40%
+          right: 20px
+          transform: rotate(90deg)
+          .outer-ring__cover
+            transform: translateY(60px)
+        &:nth-child(4)
+          bottom: 0
+          left: 50%
+          margin-left: -10px
+          .outer-ring__cover
+            transform: translateY(-60px)
+
+  .styled-list
+    +mobile
+      padding-left: 24px
+      padding-right: 24px

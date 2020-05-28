@@ -5,13 +5,18 @@
 		height: 0
 
 @keyframes curtainDim
-	from
+	0%
 		opacity: 1
-	to
+		z-index: 2
+	80%
 		opacity: 0
+		z-index: 2
+	100%
+		opacity: 0
+		z-index: -1
 
 @keyframes wrapperToFront
-	from 
+	from
 		z-index: 1
 	to
 		z-index: 5

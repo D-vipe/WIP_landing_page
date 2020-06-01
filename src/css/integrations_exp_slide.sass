@@ -5,15 +5,22 @@
       height: 592px
       video
         transform: scale(3.9) translateX(0)
+    +small-laptop
+      height: 100vh
 
   .overlay-background
     background: rgba(0,0,0,.7)
+    height: 100%
     +mobile
       height: 100vh
+    +small-laptop
+      height: 100%
 
   .section-container
     justify-content: center
     padding: 0
+    +small-laptop
+      padding: 144px 0 134px 46px
 
   .dotted-title
     +mobile
@@ -22,17 +29,16 @@
       margin-bottom: 105px
       margin-top: 0
       padding-left: 27px
-
-  //.top-row
-  //  h3
-  //    font-size: 24px!important
-  //    font-weight: normal!important
-  //    font-stretch: normal!important
-  //    font-style: normal!important
-  //    line-height: 1.46!important
-  //    letter-spacing: normal!important
+    +small-laptop
+      margin-top: 0
 
   .client-slider
+    &__item
+      h3
+        font-size: 24px
+        line-height: 1.46
+        font-weight: 300
+
     +mobile
       display: block
       padding-left: 27px
@@ -43,13 +49,27 @@
         h3
           font-size: 14px
           line-height: 1.57
-          font-weight: 300
           letter-spacing: normal
 
         .bottom-row
           justify-content: flex-end
 
+    +tablet
+      &__item
+        .bottom-row
+          justify-content: flex-start
+
+    .client-description
+      font-size: 24px
+      +small-laptop
+        font-size: 16px
+      +tablet
+        font-size: 14px
+      +mobile
+        font-size: 14px
+
   .owl-item
+    max-width: 500px
     +mobile
       max-height: 270px
 
@@ -63,4 +83,13 @@
         height: 22px
         border-top: 6px solid $main-color
         border-left: 6px solid $main-color
+        &:hover
+          border-top: 6px solid $main-color
+          border-left: 6px solid $main-color
+        +tablet
+          &:hover
+            border-top: 6px solid $main-color
+            border-left: 6px solid $main-color
+    +small-laptop
+      right: 46px
 

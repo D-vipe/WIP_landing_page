@@ -7,6 +7,12 @@
   position: relative
   +mobile
     padding-left: 0
+  +tablet
+    padding-left: 68px
+  +small-laptop
+    padding-left: 0
+  +medium-laptop
+    padding-left: 65px
 
   &__item
     background-color: $plain-white
@@ -21,6 +27,8 @@
     +mobile
       flex-direction: column
       justify-content: flex-start
+    +small-laptop
+      padding: 26px 27px
 
     &.main_background
       background-color: $main-color
@@ -33,10 +41,17 @@
         font-style: normal
         line-height: 1.15
         letter-spacing: -0.85px
+        font-family: $gothamPro-Bold
         color: $plain-black
+        &.light-title
+          font-family: $gothamPro
         +mobile
           font-size: 25px
           margin-bottom: 15px
+        +tablet
+          font-size: 30px
+          line-height: 1.17
+          letter-spacing: -0.64px
 
     .bottom-row
       display: flex
@@ -64,20 +79,29 @@
 
         +mobile
           font-size: 14px
+        +tablet
+          font-size: 24px
 
       .client-logo
         flex-shrink: 0
+        +small-laptop
+          //width: 164px
 
         &.ct-vgtrk
           margin-left: -40px
           +mobile
             margin-left: -110px
+          +small-laptop
+            margin-left: -50px
 
         &.first-st
           margin-right: -110px
 
         &.strim
           +mobile
+            margin-left: -20px
+          +small-laptop
+            width: 164px
             margin-left: -20px
 
 #sectionClients,
@@ -88,6 +112,8 @@
     right: 20%
     margin-top: 0
     z-index: 5
+    +tablet
+      right: 10px
 
     button
       display: inline-block

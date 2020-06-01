@@ -1,24 +1,40 @@
 #PMLSection
   +mobile
     max-height: 462px
+  +tablet
+    height: 100%
+    max-height: 356px
   .section-container
     flex-direction: row
     align-items: center
     padding: 0
+    height: auto
+    min-height: auto
     +mobile
       height: 442px
       max-height: 442px
       align-items: flex-start
+    +tablet
+      height: 100%
+      align-items: flex-start
+    +small-laptop
+      height: auto
+      min-height: auto
 
     a
       position: relative
       z-index: 10
       text-decoration: none
+      height: 100%
+      display: flex
+      align-items: center
       &:focus
         outline: none
       +mobile
         height: 100%
         max-height: 442px
+      +small-laptop
+        height: 100%
 
   .video-bg
     width: 100%
@@ -27,6 +43,8 @@
     position: relative
     +mobile
       height: 442px
+    +tablet
+      height: 356px
 
   .overlay-title
     position: absolute
@@ -37,11 +55,18 @@
     height: 100%
     +mobile
       max-height: 442px
+    +tablet
+      justify-content: flex-start
+      margin-top: 90px
 
     &__container
       max-width: 990px
       margin: 0 auto
       position: relative
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
       +mobile
         margin-left: 26px
         padding-bottom: 63px
@@ -49,6 +74,11 @@
         flex-direction: column
         justify-content: flex-end
         height: 100%
+      +small-laptop
+        display: flex
+        height: 100%
+        flex-direction: column
+        justify-content: center
 
     .presentation-logo
       background: url('../general/pml-logo.png') center no-repeat
@@ -56,13 +86,20 @@
       width: 151px
       height: 151px
       position: absolute
-      top: -120px
+      top: 0
       right: 80px
       +mobile
         width: 100px
         height: 101px
         top: -1px
         left: 0
+      +tablet
+        width: 108px
+        height: 108px
+        top: -91px
+        right: 82px
+      +small-laptop
+        top: 0
 
   .section-title
     font-size: 80px
@@ -71,17 +108,36 @@
     +mobile
       font-size: 40px
       margin-bottom: 5px!important
+    +tablet
+      font-size: 60px
+      margin-left: 24px
     .dot-highlighted
       color: $plain-white
+      .dot-green
+        width: 16px
+        height: 16px
+        margin-left: 5px
+        +mobile
+          width: 8px
+          height: 8px
+          margin-bottom: 0
+        +tablet
+          width: 10px
+          height: 10px
+          margin-left: 5px
 
     &:nth-child(2)
       margin-left: 200px
       +mobile
         margin-left: 0
+      +tablet
+        margin-left: 180px
     &:nth-child(3)
       margin-left: 400px
       +mobile
         margin-left: 0
+      +tablet
+        margin-left: 300px
 
   .video-bg
     video
@@ -91,3 +147,7 @@
   .overlay-background
     +mobile
       height: 442px
+    +tablet
+      height: 356px
+      top: 50%
+      margin-top: -178px

@@ -17,6 +17,8 @@
     padding: 20px 24px
     min-height: 100%
     height: auto
+  +small-laptop
+    padding-left: 46px
 
 .overflow-wrap
   overflow: hidden
@@ -83,16 +85,24 @@
     padding: 0
     margin: 52px 0 22px 0
     align-items: flex-start
+  +small-laptop
+    padding: 0
+    flex-shrink: 0
 
 .button
   padding: 10px 20px
+  width: 199px
+  height: 50px
   color: $plain-black
   font-size: 12px
   font-weight: 500
   border: 1px solid $main-color
   cursor: pointer
+  letter-spacing: 1.01px
   &.button_main
     background-color: $main-color
+    +tablet
+      font-size: 14px
     &:hover
       background-color: $main-hover
       border: 1px solid $main-hover
@@ -123,6 +133,10 @@
     transform: scale(1.4)
     +mobile
       transform: scale(4) translateX(-100px)
+    +tablet
+      transform: scale(2.8) translateX(-220px)
+    +small-laptop
+      transform: scale(1.7)
 
 #sectionHeader
   height: 100%
@@ -147,12 +161,17 @@
   font-weight: 600
   max-width: 826px
 
+  +small-laptop
+    font-size: 48px
+    line-height: 52px
+    letter-spacing: -1.58px
+
   .dot-highlighted
     position: relative
     display: inline
     //align-items: flex-end
     color: $plain-black
-    margin-right: 28px
+    //margin-right: 28px
     line-height: 46px
     +mobile
       margin-right: 0
@@ -162,8 +181,17 @@
       width: 8px
       height: 8px
       background-color: #01da00
-      margin-left: 2px
+      margin-left: -8px
+      margin-right: 5px
       margin-bottom: -1px
+      +mobile
+        width: 5px
+        height: 5px
+        margin-left: -2px
+      +tablet
+        width: 8px
+        height: 8px
+        margin-left: -5px
 
     &:after
       //content: ''
@@ -189,8 +217,14 @@
   letter-spacing: normal
   margin-left: 20px
   +mobile
-    padding: 0
+    padding: 0 24px
     margin: 0
+    font-size: 14px
+  +tablet
+    margin: 0
+    font-size: 14px
+  +small-laptop
+    font-size: 14px
 
   li
     margin-bottom: 10px
@@ -236,6 +270,8 @@ section
       height: 76px
       top: 39%
       right: 30px
+    +medium-laptop
+      right: 210px
 
     &__circle
       position: relative
@@ -299,18 +335,35 @@ section
     font-size: 40px
     padding-left: 0
     margin-bottom: 35px
+  +tablet
+    font-size: 60px
+    padding-left: 68px
+  +small-laptop
+    padding-left: 0
+    font-size: 60px
+    margin: 61px 0
+  +medium-laptop
+    padding-left: 65px
 
   &__dot
     width: 16px
     height: 16px
     display: block
     background-color: $main-color
-    margin-bottom: 10px
+    margin-bottom: 16px
     margin-left: 7px
     +mobile
       margin-bottom: 8px
       width: 8px
       height: 8px
+    +tablet
+      width: 12px
+      height: 12px
+      margin-bottom: 12px
+    +small-laptop
+      width: 12px
+      height: 12px
+      margin-bottom: 12px
 
 .overlay-background
   width: 100%
@@ -319,6 +372,8 @@ section
   top: 0
   left: 0
   background: rgba(0,0,0,.5)
+  +tablet
+    height: 100vh
 
 .dimmed-text
   color: #f2f2f2
@@ -327,30 +382,63 @@ section
   display: none
   +mobile
     display: block
-    &.triangle-hub
-      background: url('../general/figure_objects/triangleHub.png') center no-repeat
-      -webkit-background-size: cover
-      background-size: cover
-      width: 120px
-      height: 120px
-    &.shellHub
-      background: url('../general/figure_objects/shellHub.png') center no-repeat
-      -webkit-background-size: cover
-      background-size: cover
-      width: 82px
-      height: 101px
-    &.ringsHub
-      background: url('../general/figure_objects/ringsHub.png') center no-repeat
-      -webkit-background-size: cover
-      background-size: cover
-      width: 120px
-      height: 120px
-    &.circleBricks
-      background: url('../general/circleBricks.png') center no-repeat
-      -webkit-background-size: cover
-      background-size: cover
-      width: 120px
-      height: 120px
+  +tablet
+    display: block
+  +small-laptop
+   display: block
+  &.triangle-hub
+    background: url('../general/figure_objects/triangleHub.png') center no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    width: 120px
+    height: 120px
+    +tablet
+      width: 260px
+      height: 260px
+    +small-laptop
+      width: 260px
+      height: 260px
+
+  &.shellHub
+    background: url('../general/figure_objects/shellHub.png') center no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    width: 82px
+    height: 101px
+    +tablet
+      width: 260px
+      height: 260px
+    +small-laptop
+      width: 260px
+      height: 260px
+  &.ringsHub
+    background: url('../general/figure_objects/ringsHub.png') center no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    width: 120px
+    height: 120px
+    +tablet
+      width: 260px
+      height: 260px
+      margin-bottom: 44px
+    +small-laptop
+      width: 260px
+      height: 260px
+      margin-top: 130px
+
+  &.circleBricks
+    background: url('../general/circleBricks.png') center no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    width: 120px
+    height: 120px
+    +tablet
+      width: 260px
+      height: 260px
+    +small-laptop
+      width: 260px
+      height: 260px
+      margin-top: -170px
 
 .hover-mobile-block
   display: none

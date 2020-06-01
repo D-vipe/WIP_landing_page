@@ -3,6 +3,7 @@ $(document).ready(() => {
       loop: false,
       nav: true,
       dots: false,
+      items: 3,
       stagePadding: 50,
       responsive: {
         320: {
@@ -10,10 +11,20 @@ $(document).ready(() => {
           stagePadding: 0
         },
         768: {
-          items: 2
+          items: 1,
+          stagePadding: 124
+        },
+        1024: {
+          items: 2,
+          stagePadding: 82
         },
         1440: {
-          items: 3
+          items: 2,
+          stagePadding: 60
+        },
+        1920: {
+          items: 3,
+          stagePadding: 50
         }
       }
     });
@@ -30,28 +41,19 @@ $(document).ready(() => {
         stagePadding: 0
       },
       768: {
-        items: 2
+        items: 1,
+        stagePadding: 124
+      },
+      1024: {
+        items: 2,
+        stagePadding: 64
       },
       1440: {
-        items: 3
+        items: 2,
+        stagePadding: 60
       }
     }
   });
-
-  $('#clientSliderMobile').owlCarousel({
-    loop: false,
-    nav: true,
-    dots: false,
-    items: 1,
-  });
-
-   // const video = document.querySelector('video');
-
-  //  if (screen.width > 768) {
-  //    setTimeout(()=>{
-  //      $('.video-bg').find('video').get(0).play();
-  //    }, 800);
-  // }
 
    function checkTelephone(telValue) {
      let exp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,

@@ -1,11 +1,23 @@
 #sectionClients
   position: relative
   z-index: 1
+
+  .section-container
+    +small-laptop
+      padding-top: 111px
+      padding-bottom: 117px
+
+  .dotted-title
+    +tablet
+      margin-bottom: 41px
+
   +mobile
     padding-bottom: 57px
   .section-container
     justify-content: initial
     padding-right: 0
+    +tablet
+      padding: 0
   .advantages
     display: flex
     flex-direction: row
@@ -16,6 +28,16 @@
       padding-left: 0
       padding-top: 54px
       flex-direction: column
+    +tablet
+      padding-left: 68px
+      flex-flow: wrap
+    +small-laptop
+      padding: 0
+      justify-content: space-between
+    +medium-laptop
+      padding-left: 65px
+      padding-top: 128px
+      justify-content: space-between
 
     &__item
       display: flex
@@ -23,6 +45,19 @@
       margin-right: 120px
       +mobile
         margin-right: 0
+      +tablet
+        margin-right: 0
+        width: 50%
+        margin-bottom: 42px
+        &:nth-child(2),
+        &:nth-child(4)
+          order: 2
+      +small-laptop
+        margin-right: 0
+        flex-shrink: 0
+      +medium-laptop
+        margin-right: 85px
+        flex-shrink: 0
 
       .advantages__header
         font-size: 80px
@@ -31,11 +66,19 @@
         font-style: normal
         line-height: 1
         color: $plain-white
+        font-family: $gothamPro-Bold
         text-align: left
         margin-bottom: 18px
         +mobile
           font-size: 40px
           margin-bottom: 5px
+        +tablet
+          font-size: 60px
+          letter-spacing: -1.28px
+          margin-bottom: 15px
+        +small-laptop
+          font-size: 60px
+          letter-spacing: -1.28px
 
       .advantages__description
         font-size: 16px
@@ -49,11 +92,53 @@
           font-size: 14px
           line-height: 1.57
           margin-bottom: 47px
+        +tablet
+          font-size: 14px
+          line-height: 1.57
+        +small-laptop
+          font-size: 14px
+          line-height: 1.57
+          width: 193px
+
 
   .client-slider
     &__item
       +mobile
         max-height: 380px
+        .bottom-row
+          .client-description
+            width: 230px
+
+      +tablet
+        margin-bottom: 130px
+        .bottom-row
+          .client-description
+            font-size: 14px
+            width: 210px
+
+      +small-laptop
+        .bottom-row
+          .client-description
+            font-size: 14px
+            width: 210px
+            flex-shrink: 0
+
+  .owl-item
+    +medium-laptop
+      max-width: 500px
+    &:nth-child(1)
+      .bottom-row
+        .client-description
+          +tablet
+            width: 150px
+          +small-laptop
+            width: 150px
+
+    &:nth-child(4)
+      .bottom-row
+        .client-description
+          +mobile
+            width: 240px
 
   .owl-nav
     +mobile
@@ -65,6 +150,20 @@
         height: 22px
         border-top: 6px solid $main-color
         border-left: 6px solid $main-color
+        &:hover
+          border-top: 6px solid $main-color
+          border-left: 6px solid $main-color
+      +tablet
+        &:hover
+          border-top: 6px solid $main-color
+          border-left: 6px solid $main-color
+    +tablet
+      right: 54px
+      top: -95px
+    +small-laptop
+      right: 46px
+    +medium-laptop
+      right: 135px
 
 #sectionConstructor
   position: relative
@@ -75,9 +174,24 @@
     align-items: center
     +mobile
       flex-direction: column-reverse
+    +tablet
+      flex-direction: column-reverse
+      align-items: flex-start
+      height: auto
+      min-height: auto
+      padding-bottom: 105px
+      padding-top: 150px
+    +small-laptop
+      padding-top: 160px
+      padding-bottom: 111px
+      align-items: flex-end
 
     .section-title
       margin-bottom: 60px
+      +tablet
+        font-size: 48px
+        line-height: 52px
+        letter-spacing: -1.57px
 
     .object-wrapper
       display: flex
@@ -85,6 +199,17 @@
       margin-top: 200px
       +mobile
         display: none
+      +tablet
+        display: none
+      +small-laptop
+        display: none
+
+    .object-container
+      +tablet
+        margin-right: 0
+        margin-bottom: 44px
+        margin-top: 98px
+        padding: 0
 
     .right-part
       margin-left: 12px
@@ -144,6 +269,7 @@
           bottom: 40px
           right: 30px
 
+
 #digitalArchive
   .section-container
     flex-direction: row
@@ -155,23 +281,93 @@
       justify-content: flex-start
       padding: 0
 
+    +tablet
+      flex-direction: column
+      align-items: flex-start
+      height: auto
+      min-height: auto
+      padding-bottom: 105px
+      padding-top: 105px
+
+    +small-laptop
+      height: auto
+      min-height: auto
+      align-items: flex-start
+      padding-top: 150px
+      padding-bottom: 105px
+
     .boast-block
       +mobile
         top: 36%
+      +tablet
+        top: -260px
+        right: -70px
+        width: 100%
+        max-width: 367px
+        &__circle
+          display: none
+        &__rock
+          width: 33px
+          height: 54px
+          top: 30px
+          z-index: 10
+          left: 40px
+        .hover__wrap
+          width: auto
+          height: auto
+          border-radius: 0
+          padding: 28px 29px 32px 97px
+          right: 0
+          left: unset
+          background: $main-color
+          transform: none
+
+          p
+            font-size: 14px
+            color: $plain-black
+            text-align: left
+
+      +small-laptop
+        top: 310px
+        left: -425px
+        width: 100%
+        max-width: 367px
+        &__circle
+          display: none
+        &__rock
+          width: 33px
+          height: 54px
+          top: 30px
+          z-index: 10
+          left: 40px
+        .hover__wrap
+          width: auto
+          height: auto
+          border-radius: 0
+          padding: 28px 29px 32px 97px
+          right: 0
+          left: unset
+          background: $main-color
+          transform: none
+
+          p
+            font-size: 14px
+            color: $plain-black
+            text-align: left
 
   .section-title
     margin-bottom: 60px
     +mobile
       padding-left: 24px
       padding-right: 24px
-      .dot-highlighted
-        &:after
-          bottom: 14px
-          right: -10px
-          position: absolute
-          width: 6px
-          height: 6px
-          margin-bottom: 0
+    +tablet
+      font-size: 48px
+      line-height: 52px
+      letter-spacing: -1.57px
+      max-width: 90%
+    +small-laptop
+      max-width: 650px
+
 
 
   .column
@@ -184,11 +380,20 @@
       margin-right: 0
       padding-left: 24px
       padding-right: 24px
+    +tablet
+      margin-right: 0
+      margin-bottom: 44px
+      padding: 0
 
   .object-wrapper
     overflow: initial
     +mobile
       display: none
+    +tablet
+      display: none
+    +small-laptop
+      display: none
+
     .top-line
       width: 257px
       border-top: 20px solid $plain-black
@@ -214,7 +419,3 @@
       height: 20px
       background-color: $plain-black
       margin-bottom: 30px
-
-  .styled-list
-    +mobile
-      padding: 0 24px

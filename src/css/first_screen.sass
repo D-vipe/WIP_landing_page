@@ -100,6 +100,8 @@
   margin-left: -135px
   +mobile
     display: none
+  +tablet
+    display: none
 
 .button-block
   position: relative
@@ -116,40 +118,69 @@
     +mobile
       height: 51px
       background-size: contain
+    +tablet
+      height: 132px
+      background-size: contain
+    +small-laptop
+      height: 122px
+      background-size: contain
+      margin-bottom: 23px
 
   &__bottom
     height: 184px
     background: url('../general/logo_parts/medialab.svg') left no-repeat
+    +tablet
+      height: auto
+    +small-laptop
+      height: 122px
+      background-size: contain
 
     .part-top
       display: none
+      background: url('../general/logo_parts/media.svg') left no-repeat
+      height: 51px
+      background-size: contain
+      margin-top: 10px
       +mobile
         display: block
-        background: url('../general/logo_parts/media.svg') left no-repeat
-        height: 51px
-        background-size: contain
-        margin-top: 10px
+      +tablet
+        display: block
+        height: 132px
+
 
     .part-bottom
       display: none
+      background: url('../general/logo_parts/lab.svg') right no-repeat
+      height: 51px
+      background-size: contain
+      margin-top: 10px
       +mobile
         display: block
-        background: url('../general/logo_parts/lab.svg') right no-repeat
-        height: 51px
-        background-size: contain
-        margin-top: 10px
+      +tablet
+        display: block
+        height: 131px
 
     +mobile
+      background: none
+    +tablet
       background: none
 
 .mobile-info__text
   display: none
+  position: absolute
+  top: 120px
+  z-index: 5
+  color: #FFFFFF
+  margin: 0 27px
+  font-size: 14px
+  line-height: 22px
   +mobile
     display: block
-    position: absolute
-    top: 120px
-    z-index: 5
-    color: #FFFFFF
-    margin: 0 27px
-    font-size: 14px
-    line-height: 22px
+  +tablet
+    display: block
+    font-size: 24px
+    line-height: 1.33
+    max-width: 504px
+    margin-left: 68px
+    margin-top: 42px
+

@@ -7,7 +7,7 @@
 /benchmark/js
 /benchmark/fixtures
 /examples/**
-/dist
+/dist/**
 /coverage
 /src/css/*.css.map
 .DS_Store

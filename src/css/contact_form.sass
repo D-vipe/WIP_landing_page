@@ -1,4 +1,5 @@
 #contactForm
+
   .section-container
     justify-content: flex-start
     max-width: 1040px
@@ -6,29 +7,45 @@
     margin: 0 auto
     +mobile
       padding: 0 27px
+    +tablet
+      padding: 0 68px 0 90px
+    +small-laptop
+      padding: 139px 46px 124px 46px
 
   .section-title
     margin-top: 181px
     +mobile
-      width: 100%
+      width: 90%
       margin-top: 71px
+    +tablet
+      margin-top: 160px
+      margin-bottom: 47px
+    +small-laptop
+      margin-top: 0
+      margin-bottom: 27px
+      max-width: 70%
 
     .dot-highlighted
       font-size: 80px
       color: $plain-white
+      line-height: 1
       +mobile
         font-size: 28px
         line-height: 30px
-        &:after
-          position: absolute
-          right: unset
-          left: 95px
-          bottom: -5px
-          width: 5px
-          height: 5px
+      +tablet
+        font-size: 60px
+        line-height: 1
+        letter-spacing: -1.28px
+      +small-laptop
+        font-size: 60px
+        line-height: 1
+        letter-spacing: -1.28px
+
   .row
     display: flex
     +mobile
+      flex-direction: column
+    +tablet
       flex-direction: column
 
   .half-block
@@ -36,6 +53,9 @@
     +mobile
       max-width: 100%
       margin-bottom: 25px
+    +tablet
+      max-width: 100%
+
 
     &.form-help-text
       margin-right: 144px
@@ -43,6 +63,11 @@
         margin-right: 0
         padding-right: 15px
         margin-bottom: 33px
+      +tablet
+        margin-bottom: 90px
+      +small-laptop
+        margin-right: 104px
+
       p
         width: 361px
         height: 72px
@@ -58,6 +83,14 @@
           line-height: 1.57
           width: 100%
           height: 100%
+        +tablet
+          font-size: 14px
+          line-height: 1.57
+          width: 350px
+        +small-laptop
+          font-size: 14px
+          line-height: 1.57
+          width: 350px
 
     &.form-wrap
       width: 100%
@@ -87,6 +120,11 @@
         padding-bottom: 20px
         +mobile
           font-size: 14px
+        +tablet
+          font-size: 16px
+        +small-laptop
+          font-size: 16px
+          max-width: 429px
 
         &:focus
           outline: none
@@ -97,6 +135,10 @@
           line-height: 1.5
           color: $plain-white
           transition: all .3s
+          +mobile
+            font-size: 14px
+          +tablet
+            font-size: 14px
         &.error
           border-bottom: 2px solid $plain-red
       textarea
@@ -111,6 +153,8 @@
       background-color: $main-color
       &:hover
         background-color: $main-hover
+        button
+          background-color: $main-hover
       +mobile
         width: 100%
         margin-bottom: 74px
@@ -126,5 +170,6 @@
         letter-spacing: 1.01px
         text-align: center
         color: $plain-black
-        +mobile
-          text-transform: uppercase
+        background-color: $main-color
+        border: none
+        text-transform: uppercase

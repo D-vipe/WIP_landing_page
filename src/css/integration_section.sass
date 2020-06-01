@@ -1,6 +1,11 @@
 #integrationSlide
   .section-container
     justify-content: center
+    +small-laptop
+      height: auto
+      min-height: auto
+      padding-top: 126px
+      padding-bottom: 136px
 
   .single-triangle
     display: none
@@ -14,6 +19,15 @@
     margin-left: -27px
     +mobile
       display: flex
+    +tablet
+      display: flex
+      margin: 0 auto
+      height: 684px
+      width: 375px
+      border-left: 375px solid #01da00
+      border-top: 375px solid transparent
+      border-bottom: 375px solid transparent
+      margin-left: 90px
 
     h2
       font-family: $gothamPro-Bold
@@ -26,6 +40,16 @@
       position: absolute
       left: -285px
       top: -240px
+      +tablet
+        font-size: 60px
+        line-height: 1px
+        letter-spacing: -1.28
+        left: unset
+        right: 77px
+      +small-laptop
+        font-size: 60px
+      +medium-laptop
+
 
     .custom-list
       white-space: nowrap
@@ -39,6 +63,16 @@
       padding-left: 40px
       +mobile
         top: -140px
+        span
+          max-width: 234px
+          white-space: initial
+      +tablet
+        width: 430px
+        span
+          max-width: 234px
+          white-space: initial
+          font-size: 14px
+          line-height: 1.57
 
       li
         font-size: 16px
@@ -48,6 +82,8 @@
         padding-left: 30px
         position: relative
         margin-bottom: 40px
+        +small-laptop
+          font-size: 14px
         &:before
           content: ''
           display: block
@@ -57,6 +93,10 @@
           background-color: $plain-black
           left: 0
           top: 6px
+          +tablet
+            width: 10px
+            height: 10px
+            top: 8px
 
   .figure-wrapper
     display: flex
@@ -65,8 +105,14 @@
     position: relative
     +mobile
       display: none
+    +tablet
+      display: none
+    +small-laptop
+      padding-left: 105px
+
     h2
       font-size: 80px
+      font-family: $gothamPro-Bold
       font-weight: bold
       font-stretch: normal
       font-style: normal
@@ -75,6 +121,14 @@
       position: absolute
       left: 280px
       top: 80px
+      +small-laptop
+        font-size: 60px
+        letter-spacing: -1.28px
+        font-family: $gothamPro-Bold
+        left: -10px
+      +medium-laptop
+        left: 30px
+
     .triangle-right
       width: 334px
       height: 614px
@@ -82,6 +136,13 @@
       border-top: 334px solid transparent
       border-bottom: 334px solid transparent
       position: relative
+      +small-laptop
+        width: 276px
+        height: 507px
+        border-left: 276px solid #01da00
+        border-top: 276px solid transparentintegrationExperienceSlide
+        border-bottom: 276px solid transparent
+
       .custom-list
         white-space: nowrap
         position: absolute
@@ -92,6 +153,10 @@
         font-size: 16px
         list-style: none
         padding-left: 40px
+        +small-laptop
+          right: 10px
+          padding-left: 24px
+
         li
           font-size: 16px
           font-weight: normal
@@ -99,6 +164,8 @@
           font-style: normal
           line-height: 1.5
           letter-spacing: normal
+          +small-laptop
+            font-size: 14px
         &:before
           content: ''
           display: block
@@ -108,3 +175,7 @@
           background-color: $plain-black
           left: 0
           top: 3px
+          +small-laptop
+            top: 5px
+            width: 10px
+            height: 10px

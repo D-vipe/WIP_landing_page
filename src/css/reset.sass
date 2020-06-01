@@ -75,6 +75,8 @@ button
   animation-delay: 2.2s
   animation-direction: normal
   animation-fill-mode: forwards
+  +small-laptop
+    padding-bottom: 275px
 
 
 .header
@@ -94,6 +96,13 @@ button
   +mobile
     min-width: unset
     height: 509px
+  +tablet
+    min-width: unset
+    height: 293px
+  +small-laptop
+    height: 275px
+    margin-top: -275px
+
   .section-container
     max-width: 1040px
     margin: 0 auto
@@ -101,12 +110,19 @@ button
     flex-direction: row
     +mobile
       flex-direction: column
+    +tablet
+      flex-direction: column
+      padding: 76.6px 39px 74px 45px
+    +small-laptop
+      padding: 76px 46px 80px 46px
 
     .left-side
       display: flex
       +mobile
         flex-direction: column
         padding: 0 27px
+      +tablet
+        justify-content: space-between
 
       .logo
         background: url('../general/logo_parts/logo-light.png') center no-repeat
@@ -132,6 +148,15 @@ button
             a
               @extend li
               text-decoration: none
+            +tablet
+              font-size: 14px
+              line-height: 1.57
+              margin-bottom: 8px
+            +small-laptop
+              font-size: 14px
+              line-height: 1.57
+              margin-bottom: 8px
+
 
     .right-side
       display: flex
@@ -139,6 +164,10 @@ button
       justify-content: space-between
       +mobile
         padding: 0 27px
+      +tablet
+        flex-direction: row
+        align-items: center
+
       .social-block
         display: flex
         flex-flow: nowrap
@@ -147,10 +176,13 @@ button
           display: grid
           grid-template-columns: 1fr 1fr 1fr 1fr
           grid-gap: 20px
+        +small-laptop
+          margin-bottom: 42px
 
         a
           background-size: cover
           background-position: center
+          background-repeat: no-repeat
           margin: 0 19px
           cursor: pointer
           position: relative
@@ -193,6 +225,18 @@ button
             margin-right: 0
             +mobile
               margin-right: auto
+          +tablet
+            margin: 0 15px
+            &.vk,
+            &.fb,
+            &.insta,
+            &.ok,
+            &.twitter,
+            &.switch,
+            &.youtube
+              width: 30px
+              height: 30px
+              background-size: contain
 
       .company-link
         margin-bottom: 30px
@@ -204,6 +248,11 @@ button
           margin-bottom: 0
           text-align: left
           margin-top: 40px
+        +tablet
+          margin-bottom: 0
+          margin-right: 20px
+          font-size: 14px
+          line-height: 1.57
 
         a
           font-size: 16px

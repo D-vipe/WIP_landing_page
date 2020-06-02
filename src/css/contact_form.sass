@@ -153,8 +153,16 @@
       background-color: $main-color
       &:hover
         background-color: $main-hover
+        +mobile
+          background-color: $main-color
+        +tablet
+          background-color: $main-color
         button
           background-color: $main-hover
+          +mobile
+            background-color: $main-color
+          +tablet
+            background-color: $main-color
       +mobile
         width: 100%
         margin-bottom: 74px

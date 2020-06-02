@@ -106,6 +106,12 @@
     &:hover
       background-color: $main-hover
       border: 1px solid $main-hover
+      +mobile
+        background-color: $main-color
+        border: 1px solid $main-color
+      +tablet
+        background-color: $main-color
+        border: 1px solid $main-color
     +mobile
       display: none
     &.mobile
@@ -377,6 +383,10 @@ section
     height: 100vh
   &:hover
     background: rgba(0,0,0,.7)
+    +mobile
+      background: rgba(0,0,0,.5)
+    +tablet
+      background: rgba(0,0,0,.5)
 
 .dimmed-text
   color: #f2f2f2

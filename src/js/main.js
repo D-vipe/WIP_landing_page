@@ -1,4 +1,5 @@
 import Inputmask from "inputmask";
+const autosize = require('autosize');
 
 $(document).ready(() => {
   $('#clientSlider').owlCarousel({
@@ -110,6 +111,9 @@ $(document).ready(() => {
 
   // tel input mask
   Inputmask({"mask": "+7(999) 999-99-99"}).mask($('input[name=tel]'));
+
+  //autosize textarea
+  autosize($('textarea'));
 
   $('input[name=tel]').on('change', function () {
     let tel = $(this).val();

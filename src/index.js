@@ -1,5 +1,6 @@
 import './css/style.sass'
 import './js/owl.carousel.min.js'
+import 'autosize'
 import './js/main.js'
 import './js/animations'
 

@@ -26,6 +26,7 @@ $(document).ready(() => {
 
   gsap.set('#sectionConstructor .section-title', {y: 600, opacity: 0});
   gsap.set('#sectionConstructor .styled-list', {y: 800, opacity: 0});
+  gsap.set('#sectionConstructor .mobile-object', {y: 800, opacity: 0});
 
   gsap.set('#bottomRighthub', {rotate: -90, y: 23});
   gsap.set('.long-black-line', {rotate: 90, x: 90, y: 120});
@@ -38,6 +39,8 @@ $(document).ready(() => {
   gsap.set('#digitalArchive .boast-block', {y: 600, opacity: 0});
   gsap.set('#digitalArchive .styled-list', {y: 800, opacity: 0});
   gsap.set('#digitalArchive .boast-block__circle', {rotate: -200});
+  gsap.set('#digitalArchive .hover-mobile-block', {y: 800, opacity: 0});
+  gsap.set('#digitalArchive .mobile-object', {y: 800, opacity: 0});
 
   gsap.set('#digitalArchive .line.bottom', {opacity: 0, y: -90});
   gsap.set('#digitalArchive .brick', {opacity: 0});
@@ -51,6 +54,7 @@ $(document).ready(() => {
   gsap.set('#signalTransmission .fourth-ring', {opacity: 0});
   gsap.set('#signalTransmission .third-ring', {opacity: 0});
   gsap.set('#signalTransmission .second-ring', {opacity: 0});
+  gsap.set('#signalTransmission .mobile-object', {y: 800, opacity: 0});
 
   //sixth slide
 
@@ -60,6 +64,8 @@ $(document).ready(() => {
   gsap.set('#promoSection .boast-block', {y: 500, opacity: 0});
   gsap.set('#promoSection .styled-list', {y: 800, opacity: 0});
   gsap.set('#promoSection .boast-block__circle', {rotate: -200});
+  gsap.set('#promoSection .hover-mobile-block', {y: 800, opacity: 0});
+  gsap.set('#promoSection .mobile-object', {y: 800, opacity: 0});
 
   //seventh slide
 
@@ -111,7 +117,7 @@ $(document).ready(() => {
       slideTopLogo = TweenMax.fromTo('.logo__top', 2, {x: 0, y: 0}, {x: ww, y: -wh}),
       slideBottomLogo = TweenMax.fromTo('.logo__bottom', 2, {x: 0, y: 0}, {x: -ww, y: -wh}),
       slideTitile = TweenMax.to('.title', .4, {opacity: 1}),
-      slideHeaderInfo = TweenMax.to('.header-info__text', 1, {y: 120, opacity: 0});
+      slideHeaderInfo = TweenMax.to('.header-info__text', 1, {y: -120, opacity: 0});
 
 
   // Add all tweens to the first timeline
@@ -206,7 +212,8 @@ $(document).ready(() => {
       // Third slide preparations
       new TimelineMax()
         .to('#sectionConstructor .section-title', {y: 0, opacity: 1, duration: 2})
-        .to('#sectionConstructor .styled-list', {y: 0, opacity: 1, duration: 2}, '<.2');
+        .to('#sectionConstructor .styled-list', {y: 0, opacity: 1, duration: 2}, '<.2')
+        .to('#sectionConstructor .mobile-object', {y: 0, opacity: 1, duration: 2}, 0);
 
       if (!$('#sectionConstructor').hasClass('animated')) {
         let figureHub = new TimelineMax();
@@ -268,7 +275,9 @@ $(document).ready(() => {
         .to('#digitalArchive .section-title', 2, {y: 0, opacity: 1})
         .to('#digitalArchive .boast-block', 2.5, {y: 0, opacity: 1}, '<.2')
         .to('#digitalArchive .styled-list', 2.2, {y: 0, opacity: 1}, 0)
-        .to('#digitalArchive .boast-block__circle', 3, {rotate: 0}, 0);
+        .to('#digitalArchive .boast-block__circle', 3, {rotate: 0}, 0)
+        .to('#digitalArchive .hover-mobile-block', 2.2, {y: 0, opacity: 1}, 0)
+        .to('#digitalArchive .mobile-object', 2.2, {y: 0, opacity: 1}, 0);
 
       //  object animation
       if ( !fourthSlideSelector.hasClass('animated') ) {
@@ -313,7 +322,8 @@ $(document).ready(() => {
       // Title and list animation
       new TimelineMax()
         .to('#signalTransmission .section-title', 2, {y: 0, opacity: 1})
-        .to('#signalTransmission .styled-list', 2, {y: 0, opacity: 1}, '<.3');
+        .to('#signalTransmission .styled-list', 2, {y: 0, opacity: 1}, '<.3')
+        .to('#signalTransmission .mobile-object', 2, {y: 0, opacity: 1}, 0);
 
       // Object animation
       if ( !fifthSlideSelector.hasClass('animated') ) {
@@ -355,7 +365,9 @@ $(document).ready(() => {
         .to('#promoSection .section-title', 1.5, {y: 0, opacity: 1})
         .to('#promoSection .boast-block', 2.5, {y: 0, opacity: 1}, '<.2')
         .to('#promoSection .styled-list', 1.5, {y: 0, opacity: 1}, '<.3')
-        .to('#promoSection .boast-block__circle', 1.8, {rotate: 0}, 0);
+        .to('#promoSection .boast-block__circle', 1.8, {rotate: 0}, 0)
+        .to('#promoSection .hover-mobile-block', 1.5, {y: 0, opacity: 1}, 0)
+        .to('#promoSection .mobile-object', 1.5, {y: 0, opacity: 1}, 0);
 
       // Object animation
       if ( !sixthSlideSelector.hasClass('animated') ) {
@@ -535,7 +547,6 @@ $(document).ready(() => {
     triggerElement: '#integrationExperienceSlide',
     offset: 0
   }).on('leave', function (event) {
-    console.log(event.scrollDirection);
     if ( event.scrollDirection === 'REVERSE' ) {
       lightTitle();
     }

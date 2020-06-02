@@ -2,6 +2,13 @@ import Inputmask from "inputmask";
 const autosize = require('autosize');
 
 $(document).ready(() => {
+  // tel input mask
+  Inputmask({"mask": "+7(999) 999-99-99"}).mask($('input[name=tel]'));
+
+  //autosize textarea
+  autosize($('textarea'));
+
+
   $('#clientSlider').owlCarousel({
     loop: false,
     nav: true,
@@ -58,6 +65,7 @@ $(document).ready(() => {
     }
   });
 
+  // Validate phone with reg exp | fallback if input mask won't work
   function checkTelephone(telValue) {
     let exp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
       errorBlock = $('.error-message'),
@@ -91,9 +99,8 @@ $(document).ready(() => {
     return telValid;
   }
 
-  function confirmFormSubmit() {
-    const formBlock = $('#pageForm'),
-      leftBlock = $('.form-help-text p'),
+  function confirmFormSubmit(formBlock) {
+    const leftBlock = $('.form-help-text p'),
       initialMessage = 'Возникли вопросы или хотите оценить стоимость проекта? Оставьте заявку и наш' +
         ' менеджер с вами свяжется.',
       newMessage = 'Спасибо! В течении дня с вами свяжется наш менеджер для уточнения деталей проекта.';
@@ -109,30 +116,43 @@ $(document).ready(() => {
   }
 
 
-  // tel input mask
-  Inputmask({"mask": "+7(999) 999-99-99"}).mask($('input[name=tel]'));
-
-  //autosize textarea
-  autosize($('textarea'));
-
   $('input[name=tel]').on('change', function () {
     let tel = $(this).val();
     checkTelephone(tel);
   });
 
+  // Form submit function
+
   $('#pageForm').submit(function (e) {
     e.preventDefault();
     //validate tel input
-    let telInput = $('input[type=tel]'),
+    let telInput = $('#pageForm input[type=tel]'),
       formValid = checkTelephone(telInput.val());
 
     if (formValid) {
-      confirmFormSubmit();
+      confirmFormSubmit($('#pageForm'));
     }
   });
 
-  $('.button_callback').click(function () {
-    console.log(123);
+  $('#pageFormPopup').submit(function (e) {
+    e.preventDefault();
+    //validate tel input
+    let telInput = $('#pageFormPopup input[type=tel]'),
+      formValid = checkTelephone(telInput.val());
+
+    if (formValid) {
+      confirmFormSubmit($('#pageFormPopup'));
+    }
   });
+
+  // Form submit functions end
+
+  $('.button_callback').click(function () {
+    $('#formModal').addClass('slide-in');
+  });
+
+  $('.close-popup').click(function () {
+    $('#formModal').removeClass('slide-in');
+  })
 
 });

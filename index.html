@@ -644,6 +644,48 @@
     </div>
 </footer>
 
+<div class="pop-up-window dark-noise" id="formModal">
+    <span class="close-popup">
+
+    </span>
+    <div class="section-container">
+        <div class="row">
+            <h2 class="section-title">
+                <span class="dot-highlighted">Разработаем решение под ваши задачи <span class="dot-green"></span></span>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="half-block form-help-text">
+                <p>Возникли вопросы или хотите оценить стоимость проекта? Оставьте заявку и наш менеджер с
+                    вами свяжется.</p>
+            </div>
+            <div class="half-block form-wrap">
+                <form action="/contact" id="pageFormPopup">
+                    <div class="input-group">
+                        <!--<label for="contactName">Ваше имя</label>-->
+                        <input type="text" name="name" placeholder="Ваше имя">
+                    </div>
+
+                    <div class="input-group">
+                        <!--<label for="contactPhone">Телефон</label>-->
+                        <input type="tel"
+                               name="tel" placeholder="Телефон">
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea name="comment" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button class="submit-button" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 <script type="text/javascript" src="dist/main.js"></script>
 </html>

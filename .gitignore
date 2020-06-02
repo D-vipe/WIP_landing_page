@@ -12,6 +12,7 @@
 /src/css/*.css.map
 .DS_Store
 *.log
+*.map
 .idea
 .vscode
 .cache
